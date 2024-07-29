@@ -33,7 +33,6 @@ const Footer = () => {
 		<>
 			<FadeInSection
 				className="hidden lg:block p-8 bg-PURPLE rounded-t-lg shadow-sm w-full text-['Poppins'] text-white"
-				isOnce
 			>
 				{(inView: boolean) => (
 					<motion.ul

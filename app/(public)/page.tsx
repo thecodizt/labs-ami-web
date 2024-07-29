@@ -13,8 +13,8 @@ const container = {
 		opacity: 1,
 		scale: 1,
 		transition: {
-			delayChildren: 0.4,
-			staggerChildren: 0.4,
+			delayChildren: 0.1,
+			staggerChildren: 0.3,
 		},
 	},
 };
@@ -32,7 +32,6 @@ export default function Home() {
 		<div className="bg-gradient-to-b from-VIOLET via-GOLD to-white p-4 h-screen">
 			<FadeInSection
 				className="h-[500px] lg:h-full w-full flex flex-col bg-white rounded-lg shadow-lg p-4"
-				isOnce
 			>
 				{(inView: boolean) => (
 					<>
@@ -156,7 +155,6 @@ export default function Home() {
 			{/* Module 2 - Desktop  */}
 			<FadeInSection
 				className="hidden lg:flex h-[500px] lg:h-[60vh] w-full relative p-4 items-center justify-center"
-				isOnce
 			>
 				{(inView: boolean) => (
 					<>
