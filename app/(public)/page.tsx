@@ -180,7 +180,7 @@ export default function Home() {
 							</motion.li>
 							<motion.li
 								variants={item}
-								className="absolute rotate-45 top-[50px] left-[300px] flex flex-col items-center justify-center gap-2 bg-LIGHTBLUE bg-opacity-10 rounded-lg border-2 border-r-LIGHTBLUE border-b-LIGHTBLUE p-2"
+								className="animate-pulse-scale absolute rotate-45 top-[50px] left-[300px] flex flex-col items-center justify-center gap-2 bg-LIGHTBLUE bg-opacity-10 rounded-lg border-2 border-r-LIGHTBLUE border-b-LIGHTBLUE p-2"
 							>
 								<div className="text-3xl font-bold font-[Sora] text-center text-LIGHTBLUE">
 									2500+
@@ -189,7 +189,7 @@ export default function Home() {
 							</motion.li>
 							<motion.li
 								variants={item}
-								className="absolute rotate-45 top-[100px] right-[400px] flex flex-col items-center justify-center gap-2 bg-ORANGE bg-opacity-10 rounded-lg border-2 border-r-ORANGE border-b-ORANGE p-2"
+								className="animate-pulse-scale absolute rotate-45 top-[100px] right-[400px] flex flex-col items-center justify-center gap-2 bg-ORANGE bg-opacity-10 rounded-lg border-2 border-r-ORANGE border-b-ORANGE p-2"
 							>
 								<div className="text-3xl font-bold font-[Sora] text-center text-ORANGE">
 									24/7
@@ -198,7 +198,7 @@ export default function Home() {
 							</motion.li>
 							<motion.li
 								variants={item}
-								className="absolute rotate-45 bottom-[100px] right-[200px] flex flex-col items-center justify-center gap-2 bg-LIGHTBLUE bg-opacity-10 rounded-lg border-2 border-r-LIGHTBLUE border-b-LIGHTBLUE p-2"
+								className=" animate-pulse-scale absolute rotate-45 bottom-[100px] right-[200px] flex flex-col items-center justify-center gap-2 bg-LIGHTBLUE bg-opacity-10 rounded-lg border-2 border-r-LIGHTBLUE border-b-LIGHTBLUE p-2"
 							>
 								<div className="text-3xl font-bold font-[Sora] text-center text-LIGHTBLUE">
 									50M$
@@ -207,7 +207,7 @@ export default function Home() {
 							</motion.li>
 							<motion.li
 								variants={item}
-								className="absolute rotate-45 bottom-[100px] left-[200px] flex flex-col items-center justify-center gap-2 bg-ORANGE bg-opacity-10 rounded-lg border-2 border-r-ORANGE border-b-ORANGE p-2"
+								className="animate-pulse-scale absolute rotate-45 bottom-[100px] left-[200px] flex flex-col items-center justify-center gap-2 bg-ORANGE bg-opacity-10 rounded-lg border-2 border-r-ORANGE border-b-ORANGE p-2"
 							>
 								<div className="text-3xl font-bold font-[Sora] text-center text-ORANGE">
 									20+

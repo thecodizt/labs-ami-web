@@ -32,7 +32,7 @@ const Footer = () => {
 	return (
 		<>
 			<FadeInSection
-				className="hidden lg:blockp-8 bg-PURPLE rounded-t-lg shadow-sm w-full text-['Poppins'] text-white"
+				className="hidden lg:block p-8 bg-PURPLE rounded-t-lg shadow-sm w-full text-['Poppins'] text-white"
 				isOnce
 			>
 				{(inView: boolean) => (

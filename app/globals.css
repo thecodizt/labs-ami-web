@@ -72,3 +72,12 @@
 html, body {
   scrollbar-width: none;
 }
+
+@keyframes pulse-scale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
