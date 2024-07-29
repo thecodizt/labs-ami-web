@@ -61,6 +61,8 @@ const config = {
         GOLD: "#f4a71d",
         VIOLET: "#0245a1",
         PURPLE: "#060a23",
+        ORANGE: "#f88b0a",
+        LIGHTBLUE: "#0561e2",
       },
       borderRadius: {
         lg: "var(--radius)",
