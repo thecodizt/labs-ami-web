@@ -63,6 +63,7 @@ const config = {
         PURPLE: "#060a23",
         ORANGE: "#f88b0a",
         LIGHTBLUE: "#0561e2",
+        SKYBLUE: "#edf1fe",
       },
       borderRadius: {
         lg: "var(--radius)",

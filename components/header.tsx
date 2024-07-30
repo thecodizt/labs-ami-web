@@ -39,7 +39,7 @@ const Header = ({ variant = "light" }: { variant?: "light" | "dark" }) => {
 		<header className="bg-gradient-to-r from-BLUE to-GOLD p-[2px] rounded-[10px] shadow-md">
 			<div
 				className={
-					"h-full w-full flex items-center justify-between px-4 py-2  rounded-[8px]" +
+					"h-full w-full flex items-center justify-between p-4 rounded-[8px]" +
 					(variant === "dark"
 						? " bg-PURPLE text-slate-300"
 						: " bg-white text-slate-600")
@@ -49,8 +49,8 @@ const Header = ({ variant = "light" }: { variant?: "light" | "dark" }) => {
 					<Image
 						src={"/logos/blue.svg"}
 						alt="AMI"
-						width={80}
-						height={10}
+						width={100}
+						height={40}
 						onClick={() => router.push("/")}
 						className="cursor-pointer hover:transform hover:scale-105 transition-transform"
 					/>
@@ -67,23 +67,26 @@ const Header = ({ variant = "light" }: { variant?: "light" | "dark" }) => {
 					/>
 				</div>
 
-				<div className="hidden lg:flex items-center justify-between gap-[100px]">
+				<div className="hidden lg:flex items-center justify-between gap-[200px]">
 					<div className="flex items-center gap-6">
 						<Button
 							variant={"ghost"}
-							onClick={() => router.push("/about-us")}
+							onClick={() => router.push("/about")}
+							className={"text-lg" + (variant === "dark" ? " text-slate-400" : "")}
 						>
 							About Us
 						</Button>
 						<Button
 							variant={"ghost"}
 							onClick={() => router.push("/company")}
+							className={"text-lg" + (variant === "dark" ? " text-slate-400" : "")}
 						>
 							Company
 						</Button>
 						<Button
 							variant={"ghost"}
 							onClick={() => router.push("/solutions")}
+							className={"text-lg" + (variant === "dark" ? " text-slate-400" : "")}
 						>
 							Solutions
 						</Button>
@@ -94,9 +97,9 @@ const Header = ({ variant = "light" }: { variant?: "light" | "dark" }) => {
 							variant={"ghost"}
 							onClick={() => router.push("/contact-us")}
 							className={
-								"rounded-[8px] bg-white hover:bg-white" +
+								"rounded-[8px] bg-white hover:bg-white text-lg p-2" +
 								(variant === "dark"
-									? " bg-PURPLE text-slate-300"
+									? " bg-PURPLE text-slate-400"
 									: "")
 							}
 							size={"sm"}
