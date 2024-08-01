@@ -1,10 +1,10 @@
 "use client";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
-import { FadeInSection } from "./ui/fade-in-view";
 import { Input } from "./ui/input";
-import { inView, motion } from "framer-motion";
 import Image from "next/image";
+import { MoveUpFadeInSection } from "./ui/move-up-fade-in-section";
+import { InfiniteMovingCardsFooter } from "./ui/infinite-moving-cards-footer";
 
 const container = {
 	hidden: { opacity: 1, scale: 0 },
@@ -31,28 +31,15 @@ const Footer = () => {
 
 	return (
 		<>
-			<FadeInSection
-				className="hidden lg:block p-8 bg-PURPLE rounded-t-lg shadow-sm w-full text-['Poppins'] text-white"
-			>
+			<MoveUpFadeInSection className="hidden lg:block p-8 bg-PURPLE rounded-lg shadow-sm h-full w-full text-['Poppins'] text-white">
 				{(inView: boolean) => (
-					<motion.ul
-						className="flex flex-col gap-8 px-6 pt-6 justify-between"
-						variants={container}
-						initial="hidden"
-						animate={inView ? "visible" : "hidden"}
-					>
+					<MoveUpFadeInSection className="flex flex-col gap-8 px-6 pt-8 w-full h-full justify-between">
 						<div className="w-full flex items-center justify-between gap-4 text-3xl font-bold">
-							<motion.li
-								variants={item}
-								className="bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent text-bold text-4xl font-[Sora]"
-							>
-								Seamless, secure and <br /> swift payment
-							</motion.li>
+							<MoveUpFadeInSection className="bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent text-bold text-5xl font-[Sora]">
+								Seamless, secure and <br /> swift payments.
+							</MoveUpFadeInSection>
 
-							<motion.li
-								variants={item}
-								className="bg-gradient-to-br from-GOLD to-BLUE rounded-full p-[2px]"
-							>
+							<MoveUpFadeInSection className="bg-gradient-to-br from-GOLD to-BLUE rounded-full p-[2px]">
 								<Button
 									variant={"ghost"}
 									onClick={() => router.push("/contact-us")}
@@ -63,53 +50,41 @@ const Footer = () => {
 								>
 									Book a Consultation
 								</Button>
-							</motion.li>
+							</MoveUpFadeInSection>
 						</div>
 						<div className="w-full flex items-center justify-between gap-4 text-3xl">
-							<div className="w-full flex gap-4 items-center">
-								<motion.li
-									variants={item}
-									className="flex flex-col gap-2"
-								>
-									<span className="bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent text-bold text-xl font-[Sora]">
+							<div className="w-[60%] flex gap-4">
+								<MoveUpFadeInSection className="flex flex-col gap-2 w-full">
+									<span className="bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent text-bold text-3xl font-[Sora]">
 										Canada
 									</span>
-									<span className="text-xs">
+									<span className="font-thin text-lg">
 										AMI Merchants Services Inc 13841 Harper
 										Road Surrey, BC Canada V3R 5L5
 									</span>
-								</motion.li>
-								<motion.li
-									variants={item}
-									className="flex flex-col gap-2"
-								>
-									<span className="bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent text-bold text-xl font-[Sora]">
+								</MoveUpFadeInSection>
+								<MoveUpFadeInSection className="flex flex-col gap-2 w-full">
+									<span className="bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent text-bold text-3xl font-[Sora]">
 										United States
 									</span>
-									<span className="text-xs">
+									<span className="font-thin text-lg">
 										American Merchants Inc 2219 W Olive Ave
 										#106 Burbank, CA USA 91506
 									</span>
-								</motion.li>
-								<motion.li
-									variants={item}
-									className="flex flex-col gap-2"
-								>
-									<span className="bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent text-bold text-xl font-[Sora]">
+								</MoveUpFadeInSection>
+								<MoveUpFadeInSection className="flex flex-col gap-2 w-full">
+									<span className="bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent text-bold text-3xl font-[Sora]">
 										India
 									</span>
-									<span className="text-xs">
+									<span className="text-lg font-thin">
 										AMI Merchant Services Pvt Ltd Suite 120
 										Edmonton Mall The Bristol, Gurgaon,
 										India
 									</span>
-								</motion.li>
+								</MoveUpFadeInSection>
 							</div>
-							<div className="w-full flex flex-col items-end justify-end gap-4 p-8">
-								<motion.li
-									variants={item}
-									className="flex flex-col items-start gap-2"
-								>
+							<div className="w-[40%] flex flex-col items-end justify-end gap-4 p-8">
+								<MoveUpFadeInSection className="flex flex-col items-start gap-2">
 									<span className="text-sm">
 										Join our mailing list
 									</span>
@@ -117,14 +92,11 @@ const Footer = () => {
 										placeholder="Enter your email"
 										className="w-[200px] h-10 p-2 rounded-full border border-slate-600 bg-transparent text-slate-600 outline-none"
 									/>
-								</motion.li>
+								</MoveUpFadeInSection>
 							</div>
 						</div>
 
-						<motion.li
-							variants={item}
-							className="w-full flex flex-col items-start justify-center gap-2 text-slate-400"
-						>
+						<MoveUpFadeInSection className="w-full flex flex-col items-start justify-center gap-2 text-slate-400">
 							<div className="flex gap-2 items-center">
 								<Image
 									src={"/images/hero/green-check.png"}
@@ -174,7 +146,7 @@ const Footer = () => {
 									Minneapolis, MN]
 								</span>
 							</div>
-						</motion.li>
+						</MoveUpFadeInSection>
 
 						<div className="w-full flex justify-between items-center text-slate-400 text-xs pt-8">
 							<span>
@@ -185,9 +157,100 @@ const Footer = () => {
 							</span>
 							<span>Cookies Terms of Use Legal</span>
 						</div>
-					</motion.ul>
+					</MoveUpFadeInSection>
 				)}
-			</FadeInSection>
+			</MoveUpFadeInSection>
+
+			<MoveUpFadeInSection className="flex lg:hidden flex-col gap-4 p-8 bg-PURPLE rounded-lg shadow-sm h-full w-full text-['Poppins'] text-white">
+				<div className="w-full flex flex-col items-center justify-center gap-4 text-2xl font-bold text-center">
+					<MoveUpFadeInSection className="bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent text-bold text2xl font-[Sora]">
+						Seamless, secure and <br /> swift payments.
+					</MoveUpFadeInSection>
+
+					<MoveUpFadeInSection className="bg-gradient-to-br from-GOLD to-BLUE rounded-full p-[2px]">
+						<Button
+							variant={"ghost"}
+							onClick={() => router.push("/contact-us")}
+							className={
+								"rounded-full h-full w-full p-4 bg-PURPLE hover:bg-PURPLE text-white text-xs"
+							}
+							size={"sm"}
+						>
+							Book a Consultation
+						</Button>
+					</MoveUpFadeInSection>
+				</div>
+				<MoveUpFadeInSection className="w-full flex flex-col items-center justify-center gap-4 p-4">
+					<span className="text-sm">Join our mailing list</span>
+					<Input
+						placeholder="Enter your email"
+						className="w-full h-10 p-2 rounded-full border border-slate-600 bg-transparent text-slate-600 outline-none"
+					/>
+				</MoveUpFadeInSection>
+
+				<div className="w-full flex items-center justify-between gap-4 text-3xl">
+					<InfiniteMovingCardsFooter />
+				</div>
+
+				<MoveUpFadeInSection className="w-full flex flex-col items-start justify-center gap-2 text-slate-400">
+					<div className="flex gap-2 items-center">
+						<Image
+							src={"/images/hero/green-check.png"}
+							alt="AMI"
+							width={20}
+							height={20}
+						/>
+						<span className="max-w-[80vw] text-xs font-light text-ellipsis text-nowrap overflow-hidden">
+							For the US, American Merchants Inc is a registered
+							ISO of Wells Fargo Bank, NA, Concord, CA, Fifth
+							Third Bank, N.A. Cincinnati, OH, USA and Elavon,
+							Inc. Georgia [a wholly owned subsidiary of U.S.
+							Bancorp, Minneapolis, MN]
+						</span>
+					</div>
+
+					<div className="flex gap-2 items-center">
+						<Image
+							src={"/images/hero/green-check.png"}
+							alt="AMI"
+							width={20}
+							height={20}
+						/>
+						<span className="max-w-[80vw] text-xs font-light text-ellipsis text-nowrap overflow-hidden">
+							For Canada, American Merchants Inc is a registered
+							ISO of Wells Fargo Bank, NA, Concord, CA, Fifth
+							Third Bank, N.A. Cincinnati, OH, USA and Elavon,
+							Inc. Georgia [a wholly owned subsidiary of U.S.
+							Bancorp, Minneapolis, MN]
+						</span>
+					</div>
+
+					<div className="flex gap-2 items-center">
+						<Image
+							src={"/images/hero/green-check.png"}
+							alt="AMI"
+							width={20}
+							height={20}
+						/>
+						<span className="max-w-[80vw] text-xs font-light text-ellipsis text-nowrap overflow-hidden">
+							For India, American Merchants Inc is a registered
+							ISO of Wells Fargo Bank, NA, Concord, CA, Fifth
+							Third Bank, N.A. Cincinnati, OH, USA and Elavon,
+							Inc. Georgia [a wholly owned subsidiary of U.S.
+							Bancorp, Minneapolis, MN]
+						</span>
+					</div>
+				</MoveUpFadeInSection>
+
+				<div className="w-full h-full flex flex-col justify-end items-center text-slate-400 text-xs font-thin text-center pt-8 gap-8"> 
+					<span>
+						Copyright ©️ American Merchants Inc. 2007 - 2024. All
+						rights reserved. American Merchants Inc. is a registered
+						trade mark. Any unauthorised use is expressly prohibited{" "}
+					</span>
+					<span>Cookies Terms of Use Legal</span>
+				</div>
+			</MoveUpFadeInSection>
 		</>
 	);
 };

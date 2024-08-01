@@ -33,7 +33,7 @@ const options = [
 	{ name: "Solutions", href: "/solutions" },
 ];
 
-const Header = ({ variant = "light" }: { variant?: "light" | "dark" }) => {
+const Header = ({ variant = "light", active = null }: { variant?: "light" | "dark", active?: string | null }) => {
 	const router = useRouter();
 	return (
 		<header className="bg-gradient-to-r from-BLUE to-GOLD p-[2px] rounded-[10px] shadow-md">
@@ -72,21 +72,21 @@ const Header = ({ variant = "light" }: { variant?: "light" | "dark" }) => {
 						<Button
 							variant={"ghost"}
 							onClick={() => router.push("/about")}
-							className={"text-lg" + (variant === "dark" ? " text-slate-400" : "")}
+							className={"text-lg" + (variant === "dark" ? " text-slate-400" : "") + (active === "about" ? " bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent" : "")}
 						>
 							About Us
 						</Button>
 						<Button
 							variant={"ghost"}
 							onClick={() => router.push("/company")}
-							className={"text-lg" + (variant === "dark" ? " text-slate-400" : "")}
+							className={"text-lg" + (variant === "dark" ? " text-slate-400" : "") + (active === "company" ? " bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent" : "")}
 						>
 							Company
 						</Button>
 						<Button
 							variant={"ghost"}
 							onClick={() => router.push("/solutions")}
-							className={"text-lg" + (variant === "dark" ? " text-slate-400" : "")}
+							className={"text-lg" + (variant === "dark" ? " text-slate-400" : "") + (active === "solutions" ? " bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent" : "")}
 						>
 							Solutions
 						</Button>

@@ -1,7 +1,10 @@
 "use client";
+import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { Button } from "@/components/ui/button";
 import { MoveUpFadeInSection } from "@/components/ui/move-up-fade-in-section";
 import { motion } from "framer-motion";
+import { Move, MoveRight } from "lucide-react";
 import Image from "next/image";
 
 const container = {
@@ -26,155 +29,411 @@ const item = {
 
 const AboutPage = () => {
 	return (
-		<div className="bg-gradient-to-b from-BLUE via-GOLD to-white h-screen overflow-y-scroll scrollbar-hide snap-y snap-mandatory flex flex-col scroll">
-			<div className="min-h-screen w-full p-2 snap-start">
-				<div className="h-full w-full rounded-lg bg-PURPLE text-white shadow-sm flex flex-col p-4">
-					<Header variant="dark" />
-					<div className="h-full w-full flex">
-						<div className="w-[40%] h-full p-8 flex flex-col items-start justify-center gap-4">
-							<MoveUpFadeInSection className="text-5xl font-[Poppins] font-bold text-white">
-								About Us
-							</MoveUpFadeInSection>
-							<MoveUpFadeInSection
-								className="text-xl font-[Poppins] font-light text-white"
-								delay={0.5}
+		<>
+			<div className="hidden lg:flex bg-gradient-to-b from-BLUE via-GOLD to-white h-screen overflow-y-scroll scrollbar-hide snap-y snap-mandatory flex-col scroll">
+				<div className="min-h-screen w-full p-2 snap-start">
+					<div className="h-full w-full rounded-lg bg-PURPLE text-white shadow-sm flex flex-col p-4">
+						<Header variant="dark" active={"about"} />
+						<div className="h-full w-full flex">
+							<div className="w-[40%] h-full p-8 flex flex-col items-start justify-center gap-4">
+								<MoveUpFadeInSection className="text-5xl font-[Poppins] font-bold text-white">
+									About Us
+								</MoveUpFadeInSection>
+								<MoveUpFadeInSection
+									className="text-xl font-[Poppins] font-light text-white"
+									delay={0.5}
+								>
+									<span>
+										AMI is a leading payment processing
+										company offering versatile in-store,
+										online, and mobile solutions. Our
+										advanced technology ensures fast,
+										efficient, and secure transactions,
+										protecting sensitive financial
+										information with robust security
+										measures. We cater to the diverse needs
+										of modern businesses with comprehensive
+										payment processing services.
+									</span>
+								</MoveUpFadeInSection>
+							</div>
+							<motion.ul
+								variants={container}
+								className="w-[60%] h-full relative"
+								initial="hidden"
+								animate="visible"
 							>
-								<span>
-									AMI is a leading payment processing company
-									offering versatile in-store, online, and
-									mobile solutions. Our advanced technology
-									ensures fast, efficient, and secure
-									transactions, protecting sensitive financial
-									information with robust security measures.
-									We cater to the diverse needs of modern
-									businesses with comprehensive payment
-									processing services.
-								</span>
-							</MoveUpFadeInSection>
-						</div>
-						<motion.ul
-							variants={container}
-							className="w-[60%] h-full relative"
-							initial="hidden"
-							animate="visible"
-						>
-							<motion.li
-								variants={item}
-								className="h-full w-full flex items-center justify-center"
-							>
-								<Image
-									src={"/images/about/hero-1.png"}
-									alt=""
-									width={700}
-									height={500}
-									className="object-contain"
-								/>
-							</motion.li>
-							<motion.li
-								variants={item}
-								className="absolute bottom-[50px] left-[-20px]"
-							>
-								<Image
-									src={"/images/about/hero-2.png"}
-									alt=""
-									width={300}
-									height={200}
-									className="object-contain animate-pulse-scale"
-								/>
-							</motion.li>
-							<motion.li
-								variants={item}
-								className="absolute bottom-0 right-[20px]"
-							>
-								<Image
-									src={"/images/about/hero-3.png"}
-									alt=""
-									width={200}
-									height={200}
-									className="object-contain animate-pulse-scale"
-								/>
-							</motion.li>
-							<motion.li
-								variants={item}
-								className="absolute top-[100px] left-[-20px]"
-							>
-								<Image
-									src={"/images/about/hero-4.png"}
-									alt=""
-									width={200}
-									height={200}
-									className="object-contain animate-pulse-scale"
-								/>
-							</motion.li>
-						</motion.ul>
-					</div>
-				</div>
-			</div>
-
-			<div className="min-h-screen h-full w-full snap-start p-2">
-				<div className="bg-SKYBLUE rounded-lg shadow-sm flex flex-col gap-8 p-8 h-full w-full items-center justify-center">
-					<div className="w-full flex items-center justify-center">
-						<MoveUpFadeInSection
-							className="font-[Sora] font-bold text-black text-5xl"
-							duration={0.8}
-						>
-							Our Services
-						</MoveUpFadeInSection>
-					</div>
-					<div className="h-full w-full flex gap-8">
-						<MoveUpFadeInSection
-							delay={0.5}
-							duration={0.8}
-							className="w-full h-full flex flex-col gap-4"
-						>
-							<div className="w-full h-full flex flex-col items-start justify-center gap-4 bg-white rounded-lg shadow-sm p-8 relative">
-								<div className="absolute h-3 w-3 rounded-full bg-black top-3 left-3" />
-								<div className="absolute h-3 w-3 rounded-full bg-black top-3 right-3" />
-								<div className="absolute h-3 w-3 rounded-full bg-black bottom-3 left-3" />
-								<div className="absolute h-3 w-3 rounded-full bg-black bottom-3 right-3" />
-
-								<div className="text-xl font-[Poppins] font-light text-black flex flex-col gap-6">
+								<motion.li
+									variants={item}
+									className="h-full w-full flex items-center justify-center"
+								>
 									<Image
-										src={"/images/about/presentation.png"}
+										src={"/images/about/hero-1.png"}
+										alt=""
+										width={700}
+										height={500}
+										className="object-contain"
+									/>
+								</motion.li>
+								<motion.li
+									variants={item}
+									className="absolute bottom-[50px] left-[-20px]"
+								>
+									<Image
+										src={"/images/about/hero-2.png"}
+										alt=""
+										width={300}
+										height={200}
+										className="object-contain animate-pulse-scale"
+									/>
+								</motion.li>
+								<motion.li
+									variants={item}
+									className="absolute bottom-0 right-[20px]"
+								>
+									<Image
+										src={"/images/about/hero-3.png"}
 										alt=""
 										width={200}
 										height={200}
-										className="object-contain"
+										className="object-contain animate-pulse-scale"
 									/>
-									<div className="text-4xl font-bold font-[Sora] bg-gradient-to-r from-BLUE to-VIOLET bg-clip-text text-transparent">
-										Global <br /> Aspriation
-									</div>
-									<div>
-										At AMI, we take pride in delivering
-										superior customer service, ensuring that
-										our clients receive the highest level of
-										support and satisfaction.
+								</motion.li>
+								<motion.li
+									variants={item}
+									className="absolute top-[100px] left-[-20px]"
+								>
+									<Image
+										src={"/images/about/hero-4.png"}
+										alt=""
+										width={200}
+										height={200}
+										className="object-contain animate-pulse-scale"
+									/>
+								</motion.li>
+							</motion.ul>
+						</div>
+					</div>
+				</div>
+
+				<div className="min-h-screen h-full w-full snap-start p-2 flex flex-col items-center justify-center gap-4">
+					<div className="bg-SKYBLUE rounded-lg shadow-sm flex flex-col gap-8 p-8 h-full w-full items-center justify-center">
+						<div className="w-full flex items-center justify-center">
+							<MoveUpFadeInSection
+								className="font-[Sora] font-bold text-black text-5xl"
+								duration={0.2}
+							>
+								Our Services
+							</MoveUpFadeInSection>
+						</div>
+						<div className="h-full w-full flex gap-8">
+							<MoveUpFadeInSection
+								delay={0.2}
+								duration={0.2}
+								className="w-full h-full flex flex-col gap-4"
+							>
+								<div className="w-full h-full flex flex-col items-start justify-center gap-4 bg-white rounded-lg shadow-sm p-8 relative">
+									<div className="absolute h-3 w-3 rounded-full bg-black top-3 left-3" />
+									<div className="absolute h-3 w-3 rounded-full bg-black top-3 right-3" />
+									<div className="absolute h-3 w-3 rounded-full bg-black bottom-3 left-3" />
+									<div className="absolute h-3 w-3 rounded-full bg-black bottom-3 right-3" />
+
+									<div className="text-xl font-[Poppins] font-light text-black flex flex-col gap-6 justify-between h-full py-4">
+										<Image
+											src={
+												"/images/about/presentation.png"
+											}
+											alt=""
+											width={150}
+											height={150}
+											className="object-contain"
+										/>
+										<div className="text-[44px] font-bold font-[Sora] text-BLUE leading-none">
+											Global <br /> Aspriation
+										</div>
+										<div>
+											At AMI, we take pride in delivering
+											superior customer service, ensuring
+											that our clients receive the highest
+											level of support and satisfaction.
+										</div>
 									</div>
 								</div>
-							</div>
+							</MoveUpFadeInSection>
+
+							<MoveUpFadeInSection
+								delay={0.4}
+								duration={0.2}
+								className="w-full h-full flex flex-col gap-4"
+							>
+								<div className="w-full h-full flex flex-col items-start justify-center gap-4 bg-white rounded-lg shadow-sm p-8 relative">
+									<div className="absolute h-3 w-3 rounded-full bg-black top-3 left-3" />
+									<div className="absolute h-3 w-3 rounded-full bg-black top-3 right-3" />
+									<div className="absolute h-3 w-3 rounded-full bg-black bottom-3 left-3" />
+									<div className="absolute h-3 w-3 rounded-full bg-black bottom-3 right-3" />
+
+									<div className="text-lg font-[Poppins] font-light text-black flex flex-col gap-6 justify-between h-full py-4">
+										<Image
+											src={"/images/about/gears.png"}
+											alt=""
+											width={150}
+											height={150}
+											className="object-contain"
+										/>
+										<div className="text-[44px] font-bold font-[Sora] text-GOLD leading-none">
+											Experienced <br /> Team
+										</div>
+										<div>
+											Our team consists of knowledgeable
+											and experienced professionals
+											dedicated to providing exceptional
+											assistance with setup,
+											troubleshooting and optimizing
+											payment processes.
+										</div>
+									</div>
+								</div>
+							</MoveUpFadeInSection>
+							<MoveUpFadeInSection
+								delay={0.6}
+								duration={0.2}
+								className="w-full h-full flex flex-col gap-4"
+							>
+								<div className="w-full h-full flex flex-col items-start justify-center gap-4 bg-white rounded-lg shadow-sm p-8 relative">
+									<div className="absolute h-3 w-3 rounded-full bg-black top-3 left-3" />
+									<div className="absolute h-3 w-3 rounded-full bg-black top-3 right-3" />
+									<div className="absolute h-3 w-3 rounded-full bg-black bottom-3 left-3" />
+									<div className="absolute h-3 w-3 rounded-full bg-black bottom-3 right-3" />
+
+									<div className="text-xl font-[Poppins] font-light text-black flex flex-col gap-6 justify-between h-full py-4">
+										<Image
+											src={"/images/about/stars.png"}
+											alt=""
+											width={150}
+											height={150}
+											className="object-contain"
+										/>
+										<div className="text-[44px] font-bold font-[Sora] text-BLUE leading-none">
+											Seamless <br /> Experience
+										</div>
+										<div>
+											At AMI, we take pride in delivering
+											superior customer service, ensuring
+											that our clients receive the highest
+											level of support and satisfaction.
+										</div>
+									</div>
+								</div>
+							</MoveUpFadeInSection>
+						</div>
+					</div>
+
+					<div className="bg-SKYBLUE rounded-lg shadow-sm flex gap-8 py-8 px-12 h-full w-full items-center justify-between">
+						<MoveUpFadeInSection
+							delay={0.8}
+							duration={0.2}
+							className="font-[Sora] text-xl"
+						>
+							See what AMI Merchants can do for you.
 						</MoveUpFadeInSection>
 						<MoveUpFadeInSection
 							delay={1}
-							duration={0.8}
-							className="w-full h-full flex flex-col gap-4"
+							duration={0.2}
+							className="bg-gradient-to-r from-BLUE to-GOLD rounded-full p-[2px] text-white"
 						>
-							<div className="w-full h-full flex flex-col items-start justify-center gap-4 bg-white rounded-lg shadow-sm p-8 relative">
-								<div className="absolute h-3 w-3 rounded-full bg-black top-3 left-3" />
-								<div className="absolute h-3 w-3 rounded-full bg-black top-3 right-3" />
-								<div className="absolute h-3 w-3 rounded-full bg-black bottom-3 left-3" />
-								<div className="absolute h-3 w-3 rounded-full bg-black bottom-3 right-3" />
+							<Button className="rounded-full bg-white text-slate-900">
+								Contact Us{" "}
+								<MoveRight className="animate-pulse px-1" />
+							</Button>
+						</MoveUpFadeInSection>
+					</div>
+				</div>
 
-								<div className="text-xl font-[Poppins] font-light text-black flex flex-col gap-6">
+				<div className="min-h-screen h-full w-full snap-start p-2">
+					<div className="h-full w-full rounded-lg bg-[#fff9ed] shadow-sm flex gap-4 items-center justify-center p-[100px]">
+						<div className="bg-white rounded-lg shadow-sm flex flex-col p-4 h-full items-start justify-between">
+							<Image
+								src={"/images/about/rocket.png"}
+								alt=""
+								width={700}
+								height={500}
+								className="object-contain"
+							/>
+
+							<MoveUpFadeInSection className="w-full text-start text-4xl font-[Sora]">
+								Our{" "}
+								<span className="font-semibold">Mission</span>
+							</MoveUpFadeInSection>
+
+							<MoveUpFadeInSection className="font-light text-lg">
+								We help businesses of all sizes pay, get paid,
+								optimize, and grow. By leveraging our
+								state-of-the-art payment solutions, businesses
+								can streamline their payment processes, reduce
+								costs, and enhance their overall operational
+								efficiency. Our goal is to empower our partners
+								and merchants with the tools they need to
+								succeed in today's competitive market.
+							</MoveUpFadeInSection>
+						</div>
+						<div className="bg-white rounded-lg shadow-sm flex flex-col p-4 h-full items-start justify-between">
+							<Image
+								src={"/images/about/chart-orange.png"}
+								alt=""
+								width={700}
+								height={500}
+								className="object-contain"
+							/>
+
+							<MoveUpFadeInSection
+								delay={0.2}
+								className="w-full text-start text-4xl font-[Sora]"
+							>
+								Our{" "}
+								<span className="font-semibold">Vision</span>
+							</MoveUpFadeInSection>
+
+							<MoveUpFadeInSection
+								className="font-light text-lg"
+								delay={0.2}
+							>
+								We help businesses of all sizes pay, get paid,
+								optimize, and grow. By leveraging our
+								state-of-the-art payment solutions, businesses
+								can streamline their payment processes, reduce
+								costs, and enhance their overall operational
+								efficiency. Our goal is to empower our partners
+								and merchants with the tools they need to
+								succeed in today's competitive market.
+							</MoveUpFadeInSection>
+						</div>
+					</div>
+				</div>
+				<div className="min-h-screen h-full w-full snap-start p-2">
+					<Footer />
+				</div>
+			</div>
+
+			<div className="flex lg:hidden bg-gradient-to-b from-BLUE via-GOLD to-white h-screen overflow-y-scroll scrollbar-hide snap-y snap-mandatory flex-col scroll">
+				<div className="min-h-screen w-full p-2 snap-start flex flex-col gap-2">
+					<Header active={"about"} />
+
+					<div className="h-full w-full rounded-lg bg-PURPLE text-white shadow-sm flex flex-col p-4 items-center gap-2">
+						<div className="font-[Poppins] font-bold text-3xl p-2">
+							About Us
+						</div>
+						<MoveUpFadeInSection className="relative h-full w-full">
+							<motion.ul
+								variants={container}
+								className="w-full h-full relative"
+								initial="hidden"
+								animate="visible"
+							>
+								<motion.li
+									variants={item}
+									className="h-full w-full flex items-center justify-center"
+								>
 									<Image
-										src={"/images/about/presentation.png"}
+										src={"/images/about/hero-1.png"}
 										alt=""
-										width={200}
-										height={200}
+										width={250}
+										height={300}
 										className="object-contain"
 									/>
-									<div className="text-4xl font-bold font-[Sora] bg-gradient-to-r from-BLUE to-VIOLET bg-clip-text text-transparent">
-										Global <br /> Aspriation
+								</motion.li>
+								<motion.li
+									variants={item}
+									className="absolute bottom-[50px] left-[30px]"
+								>
+									<Image
+										src={"/images/about/hero-2.png"}
+										alt=""
+										width={120}
+										height={40}
+										className="object-contain animate-pulse-scale"
+									/>
+								</motion.li>
+								<motion.li
+									variants={item}
+									className="absolute bottom-[40px] right-[30px]"
+								>
+									<Image
+										src={"/images/about/hero-3.png"}
+										alt=""
+										width={60}
+										height={40}
+										className="object-contain animate-pulse-scale"
+									/>
+								</motion.li>
+								<motion.li
+									variants={item}
+									className="absolute top-[60px] left-[10px]"
+								>
+									<Image
+										src={"/images/about/hero-4.png"}
+										alt=""
+										width={100}
+										height={20}
+										className="object-contain animate-pulse-scale"
+									/>
+								</motion.li>
+							</motion.ul>
+						</MoveUpFadeInSection>
+						<div>
+							<MoveUpFadeInSection
+								className="font-light text-lg text-center"
+								delay={0.2}
+							>
+								We help businesses of all sizes pay, get paid,
+								optimize, and grow. By leveraging our
+								state-of-the-art payment solutions, businesses
+								can streamline their payment processes, reduce
+								costs, and enhance their overall operational
+								efficiency. Our goal is to empower our partners
+								and merchants with the tools they need to
+								succeed in today's competitive market.
+							</MoveUpFadeInSection>
+						</div>
+					</div>
+				</div>
+
+				<div className="min-h-screen h-full w-full snap-start p-2 flex flex-col items-center justify-center gap-4">
+					<div className="bg-SKYBLUE rounded-lg shadow-sm flex flex-col gap-4 p-4 h-full w-full items-center justify-center">
+						<div className="w-full flex items-center justify-center">
+							<MoveUpFadeInSection
+								className="font-[Sora] font-bold text-black text-3xl"
+								duration={0.2}
+							>
+								Our Services
+							</MoveUpFadeInSection>
+						</div>
+						<div className="h-full w-full flex flex-col gap-2">
+							<MoveUpFadeInSection
+								delay={0.2}
+								duration={0.2}
+								className="w-full h-full flex flex-col items-start justify-center gap-4 bg-white rounded-lg shadow-sm p-4 relative"
+							>
+								<div className="absolute h-2 w-2 rounded-full bg-black top-3 left-3" />
+								<div className="absolute h-2 w-2 rounded-full bg-black top-3 right-3" />
+								<div className="absolute h-2 w-2 rounded-full bg-black bottom-3 left-3" />
+								<div className="absolute h-2 w-2 rounded-full bg-black bottom-3 right-3" />
+
+								<div className="text-xs font-[Poppins] font-light text-black flex flex-col gap-2 items-center justify-center h-full py-4">
+									<div className="flex justify-center items-center w-full p-4 gap-4">
+										<Image
+											src={
+												"/images/about/presentation.png"
+											}
+											alt=""
+											width={100}
+											height={100}
+											className="object-contain"
+										/>
+										<div className="w-full text-2xl font-bold font-[Sora] text-BLUE leading-none text-start">
+											Global Aspriation
+										</div>
 									</div>
+
 									<div>
 										At AMI, we take pride in delivering
 										superior customer service, ensuring that
@@ -182,12 +441,342 @@ const AboutPage = () => {
 										support and satisfaction.
 									</div>
 								</div>
-							</div>
+							</MoveUpFadeInSection>
+							<MoveUpFadeInSection
+								delay={0.2}
+								duration={0.2}
+								className="w-full h-full flex flex-col items-start justify-center gap-4 bg-white rounded-lg shadow-sm p-4 relative"
+							>
+								<div className="absolute h-2 w-2 rounded-full bg-black top-3 left-3" />
+								<div className="absolute h-2 w-2 rounded-full bg-black top-3 right-3" />
+								<div className="absolute h-2 w-2 rounded-full bg-black bottom-3 left-3" />
+								<div className="absolute h-2 w-2 rounded-full bg-black bottom-3 right-3" />
+
+								<div className="text-xs font-[Poppins] font-light text-black flex flex-col gap-2 items-center justify-center h-full py-4">
+									<div className="flex justify-center items-center w-full p-4 gap-4">
+										<Image
+											src={"/images/about/gears.png"}
+											alt=""
+											width={100}
+											height={100}
+											className="object-contain"
+										/>
+										<div className="w-full text-2xl font-bold font-[Sora] text-GOLD leading-none text-start">
+											Experienced Team
+										</div>
+									</div>
+
+									<div>
+										Our team consists of knowledgeable and
+										experienced professionals dedicated to
+										providing exceptional assistance with
+										setup, troubleshooting and optimizing
+										payment processes.
+									</div>
+								</div>
+							</MoveUpFadeInSection>
+							<MoveUpFadeInSection
+								delay={0.2}
+								duration={0.2}
+								className="w-full h-full flex flex-col items-start justify-center gap-4 bg-white rounded-lg shadow-sm p-4 relative"
+							>
+								<div className="absolute h-2 w-2 rounded-full bg-black top-3 left-3" />
+								<div className="absolute h-2 w-2 rounded-full bg-black top-3 right-3" />
+								<div className="absolute h-2 w-2 rounded-full bg-black bottom-3 left-3" />
+								<div className="absolute h-2 w-2 rounded-full bg-black bottom-3 right-3" />
+
+								<div className="text-xs font-[Poppins] font-light text-black flex flex-col gap-2 items-center justify-center h-full py-4">
+									<div className="flex justify-center items-center w-full p-4 gap-4">
+										<Image
+											src={"/images/about/stars.png"}
+											alt=""
+											width={100}
+											height={100}
+											className="object-contain"
+										/>
+										<div className="w-full text-2xl font-bold font-[Sora] text-BLUE leading-none text-start">
+											Seamless Experience
+										</div>
+									</div>
+
+									<div>
+										We are committed to making your
+										experience with our services seamless
+										and satisfying, addressing all your
+										needs efficiently and effectively.
+									</div>
+								</div>
+							</MoveUpFadeInSection>
+						</div>
+					</div>
+				</div>
+
+				<div className="min-h-screen h-full w-full snap-start p-2 flex flex-col items-center justify-center gap-4">
+					<div className="bg-SKYBLUE rounded-lg shadow-sm flex gap-4 p-4 w-full items-center justify-between">
+						<div className="w-full flex items-center justify-center">
+							<MoveUpFadeInSection>
+								<span>
+									See what AMI Merchants can do for you.
+								</span>
+							</MoveUpFadeInSection>
+							<MoveUpFadeInSection>
+								<Button className="rounded-full bg-white text-slate-900">
+									Contact Us{" "}
+									<MoveRight className="animate-pulse px-1" />
+								</Button>
+							</MoveUpFadeInSection>
+						</div>
+					</div>
+					<div className="h-full w-full flex flex-col gap-2">
+						<div className="bg-white rounded-lg shadow-sm flex flex-col p-4 h-full items-start justify-between">
+							<Image
+								src={"/images/about/rocket.png"}
+								alt=""
+								width={400}
+								height={200}
+								className="object-contain"
+							/>
+
+							<MoveUpFadeInSection className="w-full text-start text-xl font-[Sora]">
+								Our{" "}
+								<span className="font-semibold">Mission</span>
+							</MoveUpFadeInSection>
+
+							<MoveUpFadeInSection className="font-light text-xs">
+								We help businesses of all sizes pay, get paid,
+								optimize, and grow. By leveraging our
+								state-of-the-art payment solutions, businesses
+								can streamline their payment processes, reduce
+								costs, and enhance their overall operational
+								efficiency. Our goal is to empower our partners
+								and merchants with the tools they need to
+								succeed in today's competitive market.
+							</MoveUpFadeInSection>
+						</div>
+						<div className="bg-white rounded-lg shadow-sm flex flex-col p-4 h-full items-start justify-between">
+							<Image
+								src={"/images/about/chart-orange.png"}
+								alt=""
+								width={700}
+								height={500}
+								className="object-contain"
+							/>
+							<MoveUpFadeInSection className="w-full text-start text-xl font-[Sora]">
+								Our Vision
+							</MoveUpFadeInSection>
+							<MoveUpFadeInSection className="font-light text-xs">
+								We help businesses of all sizes pay, get paid,
+								optimize, and grow. By leveraging our
+								state-of-the-art payment solutions, businesses
+								can streamline their payment processes, reduce
+								costs, and enhance their overall operational
+								efficiency. Our goal is to empower our partners
+								and merchants with the tools they need to
+								succeed in today's competitive market.
+							</MoveUpFadeInSection>
+						</div>
+					</div>
+				</div>
+
+				{/* <div className="min-h-screen h-full w-full snap-start p-2 flex flex-col items-center justify-center gap-4">
+					<div className="bg-SKYBLUE rounded-lg shadow-sm flex flex-col gap-8 p-8 h-full w-full items-center justify-center">
+						<div className="w-full flex items-center justify-center">
+							<MoveUpFadeInSection
+								className="font-[Sora] font-bold text-black text-5xl"
+								duration={0.2}
+							>
+								Our Services
+							</MoveUpFadeInSection>
+						</div>
+						<div className="h-full w-full flex gap-8">
+							<MoveUpFadeInSection
+								delay={0.2}
+								duration={0.2}
+								className="w-full h-full flex flex-col gap-4"
+							>
+								<div className="w-full h-full flex flex-col items-start justify-center gap-4 bg-white rounded-lg shadow-sm p-8 relative">
+									<div className="absolute h-3 w-3 rounded-full bg-black top-3 left-3" />
+									<div className="absolute h-3 w-3 rounded-full bg-black top-3 right-3" />
+									<div className="absolute h-3 w-3 rounded-full bg-black bottom-3 left-3" />
+									<div className="absolute h-3 w-3 rounded-full bg-black bottom-3 right-3" />
+
+									<div className="text-xl font-[Poppins] font-light text-black flex flex-col gap-6 justify-between h-full py-4">
+										<Image
+											src={
+												"/images/about/presentation.png"
+											}
+											alt=""
+											width={150}
+											height={150}
+											className="object-contain"
+										/>
+										<div className="text-[44px] font-bold font-[Sora] text-BLUE leading-none">
+											Global <br /> Aspriation
+										</div>
+										<div>
+											At AMI, we take pride in delivering
+											superior customer service, ensuring
+											that our clients receive the highest
+											level of support and satisfaction.
+										</div>
+									</div>
+								</div>
+							</MoveUpFadeInSection>
+
+							<MoveUpFadeInSection
+								delay={0.4}
+								duration={0.2}
+								className="w-full h-full flex flex-col gap-4"
+							>
+								<div className="w-full h-full flex flex-col items-start justify-center gap-4 bg-white rounded-lg shadow-sm p-8 relative">
+									<div className="absolute h-3 w-3 rounded-full bg-black top-3 left-3" />
+									<div className="absolute h-3 w-3 rounded-full bg-black top-3 right-3" />
+									<div className="absolute h-3 w-3 rounded-full bg-black bottom-3 left-3" />
+									<div className="absolute h-3 w-3 rounded-full bg-black bottom-3 right-3" />
+
+									<div className="text-lg font-[Poppins] font-light text-black flex flex-col gap-6 justify-between h-full py-4">
+										<Image
+											src={"/images/about/gears.png"}
+											alt=""
+											width={150}
+											height={150}
+											className="object-contain"
+										/>
+										<div className="text-[44px] font-bold font-[Sora] text-GOLD leading-none">
+											Experienced <br /> Team
+										</div>
+										<div>
+											Our team consists of knowledgeable
+											and experienced professionals
+											dedicated to providing exceptional
+											assistance with setup,
+											troubleshooting and optimizing
+											payment processes.
+										</div>
+									</div>
+								</div>
+							</MoveUpFadeInSection>
+							<MoveUpFadeInSection
+								delay={0.6}
+								duration={0.2}
+								className="w-full h-full flex flex-col gap-4"
+							>
+								<div className="w-full h-full flex flex-col items-start justify-center gap-4 bg-white rounded-lg shadow-sm p-8 relative">
+									<div className="absolute h-3 w-3 rounded-full bg-black top-3 left-3" />
+									<div className="absolute h-3 w-3 rounded-full bg-black top-3 right-3" />
+									<div className="absolute h-3 w-3 rounded-full bg-black bottom-3 left-3" />
+									<div className="absolute h-3 w-3 rounded-full bg-black bottom-3 right-3" />
+
+									<div className="text-xl font-[Poppins] font-light text-black flex flex-col gap-6 justify-between h-full py-4">
+										<Image
+											src={"/images/about/stars.png"}
+											alt=""
+											width={150}
+											height={150}
+											className="object-contain"
+										/>
+										<div className="text-[44px] font-bold font-[Sora] text-BLUE leading-none">
+											Seamless <br /> Experience
+										</div>
+										<div>
+											At AMI, we take pride in delivering
+											superior customer service, ensuring
+											that our clients receive the highest
+											level of support and satisfaction.
+										</div>
+									</div>
+								</div>
+							</MoveUpFadeInSection>
+						</div>
+					</div>
+
+					<div className="bg-SKYBLUE rounded-lg shadow-sm flex gap-8 py-8 px-12 h-full w-full items-center justify-between">
+						<MoveUpFadeInSection
+							delay={0.8}
+							duration={0.2}
+							className="font-[Sora] text-xl"
+						>
+							See what AMI Merchants can do for you.
+						</MoveUpFadeInSection>
+						<MoveUpFadeInSection
+							delay={1}
+							duration={0.2}
+							className="bg-gradient-to-r from-BLUE to-GOLD rounded-full p-[2px] text-white"
+						>
+							<Button className="rounded-full bg-white text-slate-900">
+								Contact Us{" "}
+								<MoveRight className="animate-pulse px-1" />
+							</Button>
 						</MoveUpFadeInSection>
 					</div>
 				</div>
+
+				<div className="min-h-screen h-full w-full snap-start p-2">
+					<div className="h-full w-full rounded-lg bg-[#fff9ed] shadow-sm flex gap-4 items-center justify-center p-[100px]">
+						<div className="bg-white rounded-lg shadow-sm flex flex-col p-4 h-full items-start justify-between">
+							<Image
+								src={"/images/about/rocket.png"}
+								alt=""
+								width={700}
+								height={500}
+								className="object-contain"
+							/>
+
+							<MoveUpFadeInSection className="w-full text-start text-4xl font-[Sora]">
+								Our{" "}
+								<span className="font-semibold">Mission</span>
+							</MoveUpFadeInSection>
+
+							<MoveUpFadeInSection className="font-light text-lg">
+								We help businesses of all sizes pay, get paid,
+								optimize, and grow. By leveraging our
+								state-of-the-art payment solutions, businesses
+								can streamline their payment processes, reduce
+								costs, and enhance their overall operational
+								efficiency. Our goal is to empower our partners
+								and merchants with the tools they need to
+								succeed in today's competitive market.
+							</MoveUpFadeInSection>
+						</div>
+						<div className="bg-white rounded-lg shadow-sm flex flex-col p-4 h-full items-start justify-between">
+							<Image
+								src={"/images/about/chart-orange.png"}
+								alt=""
+								width={700}
+								height={500}
+								className="object-contain"
+							/>
+
+							<MoveUpFadeInSection
+								delay={0.2}
+								className="w-full text-start text-4xl font-[Sora]"
+							>
+								Our{" "}
+								<span className="font-semibold">Vision</span>
+							</MoveUpFadeInSection>
+
+							<MoveUpFadeInSection
+								className="font-light text-lg"
+								delay={0.2}
+							>
+								We help businesses of all sizes pay, get paid,
+								optimize, and grow. By leveraging our
+								state-of-the-art payment solutions, businesses
+								can streamline their payment processes, reduce
+								costs, and enhance their overall operational
+								efficiency. Our goal is to empower our partners
+								and merchants with the tools they need to
+								succeed in today's competitive market.
+							</MoveUpFadeInSection>
+						</div>
+					</div>
+				</div> */}
+
+				<div className="min-h-screen h-full w-full snap-start p-2">
+					<Footer />
+				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 
