@@ -15,11 +15,11 @@ const CompanyPage = () => {
 		},
 		{
 			year: 2012,
-			event: "AMI decided to spread it's wings globally and launched in India",
+			event: "AMI decided to spread it&apos;s wings globally and launched in India",
 		},
 		{
 			year: 2013,
-			event: "AMI added ATM services under it's umbrella through Switch Commerce Partnership",
+			event: "AMI added ATM services under it&apos;s umbrella through Switch Commerce Partnership",
 		},
 		{
 			year: 2014,

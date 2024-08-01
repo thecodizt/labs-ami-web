@@ -273,7 +273,7 @@ const AboutPage = () => {
 								costs, and enhance their overall operational
 								efficiency. Our goal is to empower our partners
 								and merchants with the tools they need to
-								succeed in today's competitive market.
+								succeed in today&apos;s competitive market.
 							</MoveUpFadeInSection>
 						</div>
 						<div className="bg-white rounded-lg shadow-sm flex flex-col p-4 h-full items-start justify-between">
@@ -304,7 +304,7 @@ const AboutPage = () => {
 								costs, and enhance their overall operational
 								efficiency. Our goal is to empower our partners
 								and merchants with the tools they need to
-								succeed in today's competitive market.
+								succeed in today&apos;s competitive market.
 							</MoveUpFadeInSection>
 						</div>
 					</div>
@@ -391,7 +391,7 @@ const AboutPage = () => {
 								costs, and enhance their overall operational
 								efficiency. Our goal is to empower our partners
 								and merchants with the tools they need to
-								succeed in today's competitive market.
+								succeed in today&apos;s competitive market.
 							</MoveUpFadeInSection>
 						</div>
 					</div>
@@ -550,7 +550,7 @@ const AboutPage = () => {
 								costs, and enhance their overall operational
 								efficiency. Our goal is to empower our partners
 								and merchants with the tools they need to
-								succeed in today's competitive market.
+								succeed in today&apos;s competitive market.
 							</MoveUpFadeInSection>
 						</div>
 						<div className="bg-white rounded-lg shadow-sm flex flex-col p-4 h-full items-start justify-between">
@@ -572,7 +572,7 @@ const AboutPage = () => {
 								costs, and enhance their overall operational
 								efficiency. Our goal is to empower our partners
 								and merchants with the tools they need to
-								succeed in today's competitive market.
+								succeed in today&apos;s competitive market.
 							</MoveUpFadeInSection>
 						</div>
 					</div>
@@ -735,7 +735,7 @@ const AboutPage = () => {
 								costs, and enhance their overall operational
 								efficiency. Our goal is to empower our partners
 								and merchants with the tools they need to
-								succeed in today's competitive market.
+								succeed in today&apos;s competitive market.
 							</MoveUpFadeInSection>
 						</div>
 						<div className="bg-white rounded-lg shadow-sm flex flex-col p-4 h-full items-start justify-between">
@@ -766,7 +766,7 @@ const AboutPage = () => {
 								costs, and enhance their overall operational
 								efficiency. Our goal is to empower our partners
 								and merchants with the tools they need to
-								succeed in today's competitive market.
+								succeed in today&apos;s competitive market.
 							</MoveUpFadeInSection>
 						</div>
 					</div>
