@@ -16,6 +16,7 @@ import {
 	DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { useEffect, useState } from "react";
+import VideoOverlay from "./ui/video-overlay";
 
 const container = {
 	hidden: { opacity: 1, scale: 0 },
@@ -38,13 +39,25 @@ const item = {
 };
 
 const countries = [
-	{ name: "Canada", href: "/canada", image: "/images/countries/canada.png" },
 	{
 		name: "United States",
-		href: "/united-states",
+		href: "https://www.americanmerchantsinc.com/",
 		image: "/images/countries/united-states.png",
+		video: "/images/videos/three-stops.mp4",
 	},
-	{ name: "India", href: "/india", image: "/images/countries/india.png" },
+	{
+		name: "Canada",
+		href: "/canada",
+		image: "/images/countries/canada.png",
+		video: "/images/videos/to-canada.mp4",
+	},
+
+	{
+		name: "India",
+		href: "https://amimerchants.in/",
+		image: "/images/countries/india.png",
+		video: "/images/videos/to-india.mp4",
+	},
 ];
 
 const Header = ({
@@ -55,7 +68,7 @@ const Header = ({
 	active?: string | null;
 }) => {
 	const router = useRouter();
-	const [selectedCountry, setSelectedCountry] = useState(countries[1]); // Default to United States
+	const [selectedCountry, setSelectedCountry] = useState(countries[0]); // Default to United States
 
 	return (
 		<header className="bg-gradient-to-r from-BLUE to-GOLD p-[2px] rounded-[10px] shadow-md">
@@ -110,21 +123,30 @@ const Header = ({
 							<DropdownMenuSeparator />
 							{countries.map((country, index) => (
 								<DropdownMenuItem key={index}>
-									<Link
-										href={country.href}
-										className="flex items-center gap-2 p-4 hover:bg-muted"
-										onClick={() =>
-											setSelectedCountry(country)
+									<VideoOverlay
+										trigger={
+											<div
+												className="flex items-center gap-2 p-4 hover:bg-muted"
+												onClick={() =>
+													setSelectedCountry(country)
+												}
+											>
+												<Avatar>
+													<AvatarImage
+														src={country.image}
+														alt={country.name}
+													/>
+												</Avatar>
+												<span>{country.name}</span>
+											</div>
 										}
-									>
-										<Avatar>
-											<AvatarImage
-												src={country.image}
-												alt={country.name}
-											/>
-										</Avatar>
-										<span>{country.name}</span>
-									</Link>
+										videoPath={
+											country.video
+												? country.video
+												: "/images/videos/three-stops.mp4"
+										}
+										url={country.href}
+									/>
 								</DropdownMenuItem>
 							))}
 						</DropdownMenuContent>
@@ -145,7 +167,7 @@ const Header = ({
 								initial="hidden"
 								animate="visible"
 							>
-								<motion.li 
+								<motion.li
 									className="text-sm w-full text-center py-4"
 									variants={item}
 								>
