@@ -35,15 +35,15 @@ const AboutPage = () => {
 					<div className="h-full w-full rounded-lg bg-PURPLE text-white shadow-sm flex flex-col p-4">
 						<Header variant="dark" active={"about"} />
 						<div className="h-full w-full flex">
-							<div className="w-[40%] h-full p-8 flex flex-col items-start justify-center gap-4">
-								<MoveUpFadeInSection className="text-5xl font-[Poppins] font-bold text-white">
+							<div className="w-full h-full p-8 flex flex-col items-start justify-center gap-4">
+								<MoveUpFadeInSection className="text-6xl font-[Poppins] font-bold text-white">
 									About Us
 								</MoveUpFadeInSection>
 								<MoveUpFadeInSection
 									className="text-xl font-[Poppins] font-light text-white"
 									delay={0.5}
 								>
-									<span>
+									<span className="font-light">
 										AMI is a leading payment processing
 										company offering versatile in-store,
 										online, and mobile solutions. Our
@@ -59,7 +59,7 @@ const AboutPage = () => {
 							</div>
 							<motion.ul
 								variants={container}
-								className="w-[60%] h-full relative"
+								className="w-full h-full relative"
 								initial="hidden"
 								animate="visible"
 							>
@@ -70,43 +70,43 @@ const AboutPage = () => {
 									<Image
 										src={"/images/about/hero-1.png"}
 										alt=""
-										width={700}
+										width={400}
 										height={500}
-										className="object-contain"
+										className="object-contain animate-pulse-scale"
 									/>
 								</motion.li>
 								<motion.li
 									variants={item}
-									className="absolute bottom-[50px] left-[-20px]"
+									className="absolute bottom-[100px] left-[100px]"
 								>
 									<Image
 										src={"/images/about/hero-2.png"}
 										alt=""
-										width={300}
+										width={200}
 										height={200}
 										className="object-contain animate-pulse-scale"
 									/>
 								</motion.li>
 								<motion.li
 									variants={item}
-									className="absolute bottom-0 right-[20px]"
+									className="absolute bottom-[80px] right-[100px]"
 								>
 									<Image
 										src={"/images/about/hero-3.png"}
 										alt=""
-										width={200}
-										height={200}
+										width={100}
+										height={130}
 										className="object-contain animate-pulse-scale"
 									/>
 								</motion.li>
 								<motion.li
 									variants={item}
-									className="absolute top-[100px] left-[-20px]"
+									className="absolute top-[180px] left-[90px]"
 								>
 									<Image
 										src={"/images/about/hero-4.png"}
 										alt=""
-										width={200}
+										width={150}
 										height={200}
 										className="object-contain animate-pulse-scale"
 									/>
@@ -129,7 +129,7 @@ const AboutPage = () => {
 						<div className="h-full w-full flex gap-8">
 							<MoveUpFadeInSection
 								delay={0.2}
-								duration={0.2}
+								duration={0.4}
 								className="w-full h-full flex flex-col gap-4"
 							>
 								<div className="w-full h-full flex flex-col items-start justify-center gap-4 bg-white rounded-lg shadow-sm p-8 relative">
@@ -162,8 +162,8 @@ const AboutPage = () => {
 							</MoveUpFadeInSection>
 
 							<MoveUpFadeInSection
-								delay={0.4}
-								duration={0.2}
+								delay={0.6}
+								duration={0.4}
 								className="w-full h-full flex flex-col gap-4"
 							>
 								<div className="w-full h-full flex flex-col items-start justify-center gap-4 bg-white rounded-lg shadow-sm p-8 relative">
@@ -195,8 +195,8 @@ const AboutPage = () => {
 								</div>
 							</MoveUpFadeInSection>
 							<MoveUpFadeInSection
-								delay={0.6}
-								duration={0.2}
+								delay={1}
+								duration={0.4}
 								className="w-full h-full flex flex-col gap-4"
 							>
 								<div className="w-full h-full flex flex-col items-start justify-center gap-4 bg-white rounded-lg shadow-sm p-8 relative">
@@ -250,7 +250,7 @@ const AboutPage = () => {
 				</div>
 
 				<div className="min-h-screen h-full w-full snap-start p-2">
-					<div className="h-full w-full rounded-lg bg-[#fff9ed] shadow-sm flex gap-4 items-center justify-center p-[100px]">
+					<div className="h-full w-full rounded-lg bg-[#fff9ed] shadow-sm flex gap-4 items-center justify-center px-[100px] py-[80px]">
 						<div className="bg-white rounded-lg shadow-sm flex flex-col p-4 h-full items-start justify-between">
 							<Image
 								src={"/images/about/rocket.png"}
@@ -260,12 +260,12 @@ const AboutPage = () => {
 								className="object-contain"
 							/>
 
-							<MoveUpFadeInSection className="w-full text-start text-4xl font-[Sora]">
+							<MoveUpFadeInSection className="w-full text-start text-4xl font-[Sora]" delay={0.2} >
 								Our{" "}
 								<span className="font-semibold">Mission</span>
 							</MoveUpFadeInSection>
 
-							<MoveUpFadeInSection className="font-light text-lg">
+							<MoveUpFadeInSection className="text-lg" delay={0.4}>
 								We help businesses of all sizes pay, get paid,
 								optimize, and grow. By leveraging our
 								state-of-the-art payment solutions, businesses
@@ -294,8 +294,8 @@ const AboutPage = () => {
 							</MoveUpFadeInSection>
 
 							<MoveUpFadeInSection
-								className="font-light text-lg"
-								delay={0.2}
+								className="text-lg"
+								delay={0.4}
 							>
 								We help businesses of all sizes pay, get paid,
 								optimize, and grow. By leveraging our
@@ -309,6 +309,7 @@ const AboutPage = () => {
 						</div>
 					</div>
 				</div>
+
 				<div className="min-h-screen h-full w-full snap-start p-2">
 					<Footer />
 				</div>

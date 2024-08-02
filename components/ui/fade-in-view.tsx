@@ -12,7 +12,7 @@ interface FadeInSectionProps {
 }
 
 export function FadeInSection({ children, className = "", isOnce = false }: FadeInSectionProps) {
-  const [ref, inView] = useInView({ threshold: 0.1 });
+  const [ref, inView] = useInView({ threshold: 0.08 });
   const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {

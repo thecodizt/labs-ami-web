@@ -33,7 +33,7 @@ const Footer = () => {
 		<>
 			<MoveUpFadeInSection className="hidden lg:block p-8 bg-PURPLE rounded-lg shadow-sm h-full w-full text-['Poppins'] text-white">
 				{(inView: boolean) => (
-					<MoveUpFadeInSection className="flex flex-col gap-8 px-6 pt-8 w-full h-full justify-between">
+					<MoveUpFadeInSection className="flex flex-col gap-12 px-6 pt-8 w-full h-full justify-between">
 						<div className="w-full flex items-center justify-between gap-4 text-3xl font-bold">
 							<MoveUpFadeInSection className="bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent text-bold text-5xl font-[Sora]">
 								Seamless, secure and <br /> swift payments.
@@ -58,28 +58,30 @@ const Footer = () => {
 									<span className="bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent text-bold text-3xl font-[Sora]">
 										Canada
 									</span>
-									<span className="font-thin text-lg">
-										AMI Merchants Services Inc 13841 Harper
-										Road Surrey, BC Canada V3R 5L5
+									<span className="text-sm">
+										AMI Merchants Services Inc, <br /> 13841
+										Harper Road Surrey, <br /> BC Canada V3R
+										5L5
 									</span>
 								</MoveUpFadeInSection>
 								<MoveUpFadeInSection className="flex flex-col gap-2 w-full">
 									<span className="bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent text-bold text-3xl font-[Sora]">
 										United States
 									</span>
-									<span className="font-thin text-lg">
-										American Merchants Inc 2219 W Olive Ave
-										#106 Burbank, CA USA 91506
+									<span className="text-sm">
+										American Merchants Inc, <br /> 2219 W
+										Olive Ave #106, <br /> Burbank, CA USA
+										91506
 									</span>
 								</MoveUpFadeInSection>
 								<MoveUpFadeInSection className="flex flex-col gap-2 w-full">
 									<span className="bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent text-bold text-3xl font-[Sora]">
 										India
 									</span>
-									<span className="text-lg font-thin">
-										AMI Merchant Services Pvt Ltd Suite 120
-										Edmonton Mall The Bristol, Gurgaon,
-										India
+									<span className="text-sm">
+										AMI Merchant Services Pvt Ltd, <br />{" "}
+										Suite 120 Edmonton Mall, <br /> The
+										Bristol, Gurgaon, India
 									</span>
 								</MoveUpFadeInSection>
 							</div>
@@ -161,7 +163,7 @@ const Footer = () => {
 				)}
 			</MoveUpFadeInSection>
 
-			<MoveUpFadeInSection className="flex lg:hidden flex-col gap-4 p-8 bg-PURPLE rounded-lg shadow-sm h-full w-full text-['Poppins'] text-white">
+			<MoveUpFadeInSection className="flex lg:hidden flex-col gap-4 p-8 bg-PURPLE rounded-lg shadow-sm h-[98vh] w-full text-['Poppins'] text-white">
 				<div className="w-full flex flex-col items-center justify-center gap-4 text-2xl font-bold text-center">
 					<MoveUpFadeInSection className="bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent text-bold text2xl font-[Sora]">
 						Seamless, secure and <br /> swift payments.
@@ -242,7 +244,7 @@ const Footer = () => {
 					</div>
 				</MoveUpFadeInSection>
 
-				<div className="w-full h-full flex flex-col justify-end items-center text-slate-400 text-xs font-thin text-center pt-8 gap-8"> 
+				<div className="w-full h-full flex flex-col justify-end items-center text-slate-400 text-xs font-thin text-center pt-8 gap-8">
 					<span>
 						Copyright ©️ American Merchants Inc. 2007 - 2024. All
 						rights reserved. American Merchants Inc. is a registered

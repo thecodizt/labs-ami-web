@@ -1,6 +1,8 @@
+import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { MoveUpFadeInSection } from "@/components/ui/move-up-fade-in-section";
 import { TimelineComponent } from "@/components/ui/timeline";
+import Image from "next/image";
 
 const CompanyPage = () => {
 	const timelineData = [
@@ -50,7 +52,29 @@ const CompanyPage = () => {
 					Our Journey
 				</MoveUpFadeInSection>
 				<TimelineComponent data={timelineData} />
+
+				<div className="flex flex-col gap-4 p-8 w-full items-center">
+					<div className="w-[90%] h-[2px] bg-gradient-to-r from-slate-700 via-slate-300 to-slate-700 rounded-full"></div>
+
+					<div className="w-full flex flex-col lg:flex-row items-center justify-center gap-4 p-8">
+						<div className="bg-slate-800 rounded-lg shadow-sm flex flex-col gap-8 p-8 h-full w-full items-center justify-between">
+							<Image 
+								src={"/images/company/person1..png"}
+								alt=""
+								width={700}
+								height={500}
+								className="object-contain"
+							/>
+
+							<div className="text-2xl font-[Sora] text-white font">
+								Jumesh Walia
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
+			<Footer />
 		</div>
 	);
 };

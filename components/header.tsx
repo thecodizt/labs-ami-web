@@ -3,9 +3,19 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
-import { MenuIcon } from "lucide-react";
+import { ChevronDownIcon, MenuIcon } from "lucide-react";
 import { Drawer, DrawerContent, DrawerTrigger } from "./ui/drawer";
 import Link from "next/link";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { DropdownMenu } from "@radix-ui/react-dropdown-menu";
+import {
+	DropdownMenuContent,
+	DropdownMenuItem,
+	DropdownMenuLabel,
+	DropdownMenuSeparator,
+	DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
+import { useEffect, useState } from "react";
 
 const container = {
 	hidden: { opacity: 1, scale: 0 },
@@ -27,14 +37,26 @@ const item = {
 	},
 };
 
-const options = [
-	{ name: "About Us", href: "/about-us" },
-	{ name: "Company", href: "/company" },
-	{ name: "Solutions", href: "/solutions" },
+const countries = [
+	{ name: "Canada", href: "/canada", image: "/images/countries/canada.png" },
+	{
+		name: "United States",
+		href: "/united-states",
+		image: "/images/countries/united-states.png",
+	},
+	{ name: "India", href: "/india", image: "/images/countries/india.png" },
 ];
 
-const Header = ({ variant = "light", active = null }: { variant?: "light" | "dark", active?: string | null }) => {
+const Header = ({
+	variant = "light",
+	active = null,
+}: {
+	variant?: "light" | "dark";
+	active?: string | null;
+}) => {
 	const router = useRouter();
+	const [selectedCountry, setSelectedCountry] = useState(countries[1]); // Default to United States
+
 	return (
 		<header className="bg-gradient-to-r from-BLUE to-GOLD p-[2px] rounded-[10px] shadow-md">
 			<div
@@ -67,46 +89,46 @@ const Header = ({ variant = "light", active = null }: { variant?: "light" | "dar
 					/>
 				</div>
 
-				<div className="hidden lg:flex items-center justify-between gap-[200px]">
-					<div className="flex items-center gap-6">
-						<Button
-							variant={"ghost"}
-							onClick={() => router.push("/about")}
-							className={"text-lg" + (variant === "dark" ? " text-slate-400" : "") + (active === "about" ? " bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent" : "")}
-						>
-							About Us
-						</Button>
-						<Button
-							variant={"ghost"}
-							onClick={() => router.push("/company")}
-							className={"text-lg" + (variant === "dark" ? " text-slate-400" : "") + (active === "company" ? " bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent" : "")}
-						>
-							Company
-						</Button>
-						<Button
-							variant={"ghost"}
-							onClick={() => router.push("/solutions")}
-							className={"text-lg" + (variant === "dark" ? " text-slate-400" : "") + (active === "solutions" ? " bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent" : "")}
-						>
-							Solutions
-						</Button>
+				<div className="hidden lg:flex items-center justify-between gap-4">
+					<div className="bg-gradient-to-r from-GOLD to-BLUE rounded-full p-[2px] hover:shadow-sm">
+						<Avatar>
+							<AvatarImage
+								src={selectedCountry.image}
+								alt={selectedCountry.name}
+							/>
+						</Avatar>
 					</div>
-
-					<div className="bg-gradient-to-r from-GOLD to-BLUE rounded-[10px] p-[2px] hover:shadow-sm">
-						<Button
-							variant={"ghost"}
-							onClick={() => router.push("/contact-us")}
-							className={
-								"rounded-[8px] bg-white hover:bg-white text-lg p-2" +
-								(variant === "dark"
-									? " bg-PURPLE text-slate-400"
-									: "")
-							}
-							size={"sm"}
-						>
-							Contact Us
-						</Button>
-					</div>
+					<div>{selectedCountry.name}</div>
+					<DropdownMenu>
+						<DropdownMenuTrigger className="flex items-center gap-2">
+							<ChevronDownIcon className="h-4 w-4" />
+						</DropdownMenuTrigger>
+						<DropdownMenuContent>
+							<DropdownMenuLabel>
+								Select Country
+							</DropdownMenuLabel>
+							<DropdownMenuSeparator />
+							{countries.map((country, index) => (
+								<DropdownMenuItem key={index}>
+									<Link
+										href={country.href}
+										className="flex items-center gap-2 p-4 hover:bg-muted"
+										onClick={() =>
+											setSelectedCountry(country)
+										}
+									>
+										<Avatar>
+											<AvatarImage
+												src={country.image}
+												alt={country.name}
+											/>
+										</Avatar>
+										<span>{country.name}</span>
+									</Link>
+								</DropdownMenuItem>
+							))}
+						</DropdownMenuContent>
+					</DropdownMenu>
 				</div>
 
 				<div className="block lg:hidden">
@@ -118,41 +140,57 @@ const Header = ({ variant = "light", active = null }: { variant?: "light" | "dar
 						</DrawerTrigger>
 						<DrawerContent className="max-w-[50vw] h-screen ml-auto flex flex-col items-center justify-center">
 							<motion.ul
-								className="flex flex-col gap-2 p-6"
+								className="flex flex-col gap-2 p-6 w-full"
 								variants={container}
 								initial="hidden"
 								animate="visible"
 							>
-								{options.map(({ name, href }, index) => (
-									<motion.li
-										key={index}
-										className="item"
-										variants={item}
-									>
-										<Link
-											href={href}
-											className="flex items-center gap-2 p-4 hover:bg-muted"
-										>
-											<span>{name}</span>
-										</Link>
-									</motion.li>
-								))}
-								<motion.li
-									className="bg-gradient-to-r from-GOLD to-BLUE rounded-[10px] p-[2px] hover:shadow-sm"
+								<motion.li 
+									className="text-sm w-full text-center py-4"
 									variants={item}
 								>
-									<Button
-										variant={"ghost"}
-										onClick={() =>
-											router.push("/contact-us")
-										}
-										className={
-											"w-full rounded-[8px] bg-white hover:bg-white"
-										}
-									>
-										Contact Us
-									</Button>
+									Choose a country
 								</motion.li>
+								<motion.li className="item" variants={item}>
+									<div className="flex items-center gap-2 p-4 border-b mb-2">
+										<Avatar>
+											<AvatarImage
+												src={selectedCountry.image}
+												alt={selectedCountry.name}
+											/>
+										</Avatar>
+										<span>{selectedCountry.name}</span>
+									</div>
+								</motion.li>
+								{countries
+									.filter(
+										(country) =>
+											country.name !==
+											selectedCountry.name
+									)
+									.map((country, index) => (
+										<motion.li
+											key={index}
+											className="item"
+											variants={item}
+										>
+											<Link
+												href={country.href}
+												className="flex items-center gap-2 p-4 hover:bg-muted w-full"
+												onClick={() =>
+													setSelectedCountry(country)
+												}
+											>
+												<Avatar>
+													<AvatarImage
+														src={country.image}
+														alt={country.name}
+													/>
+												</Avatar>
+												<span>{country.name}</span>
+											</Link>
+										</motion.li>
+									))}
 							</motion.ul>
 						</DrawerContent>
 					</Drawer>
