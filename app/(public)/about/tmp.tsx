@@ -30,8 +30,8 @@ const item = {
 const AboutPage = () => {
 	return (
 		<>
-			<div className="hidden lg:flex bg-gradient-to-b from-BLUE via-GOLD to-white h-screen overflow-y-scroll scrollbar-hide flex-col scroll">
-				<div className="min-h-screen w-full p-2">
+			<div className="hidden lg:flex bg-gradient-to-b from-BLUE via-GOLD to-white h-screen overflow-y-scroll scrollbar-hide snap-y snap-mandatory flex-col scroll">
+				<div className="min-h-screen w-full p-2 snap-start">
 					<div className="h-full w-full rounded-lg bg-PURPLE text-white shadow-sm flex flex-col p-4">
 						<Header variant="dark" active={"about"} />
 						<div className="h-full w-full flex">
@@ -116,7 +116,7 @@ const AboutPage = () => {
 					</div>
 				</div>
 
-				<div className="min-h-screen h-full w-full p-2 flex flex-col items-center justify-center gap-4">
+				<div className="min-h-screen h-full w-full snap-start p-2 flex flex-col items-center justify-center gap-4">
 					<div className="bg-SKYBLUE rounded-lg shadow-sm flex flex-col gap-8 p-8 h-full w-full items-center justify-center">
 						<div className="w-full flex items-center justify-center">
 							<MoveUpFadeInSection
@@ -249,9 +249,9 @@ const AboutPage = () => {
 					</div> */}
 				</div>
 
-				<div className="h-full w-full p-2">
+				<div className="min-h-screen h-full w-full snap-start p-2">
 					<div className="h-full w-full rounded-lg bg-[#fff9ed] shadow-sm flex gap-4 items-center justify-center px-[100px] py-[80px]">
-						<div className="bg-white rounded-lg shadow-sm flex flex-col p-4 h-full items-start justify-between gap-4">
+						<div className="bg-white rounded-lg shadow-sm flex flex-col p-4 h-full items-start justify-between">
 							<Image
 								src={"/images/about/rocket.png"}
 								alt=""
@@ -276,7 +276,7 @@ const AboutPage = () => {
 								succeed in today&apos;s competitive market.
 							</MoveUpFadeInSection>
 						</div>
-						<div className="bg-white rounded-lg shadow-sm flex flex-col p-4 h-full items-start justify-between gap-4">
+						<div className="bg-white rounded-lg shadow-sm flex flex-col p-4 h-full items-start justify-between">
 							<Image
 								src={"/images/about/chart-orange.png"}
 								alt=""
@@ -310,7 +310,7 @@ const AboutPage = () => {
 					</div>
 				</div>
 
-				<div className="h-full w-full p-2">
+				<div className="min-h-screen h-full w-full snap-start p-2">
 					<Footer />
 				</div>
 			</div>
