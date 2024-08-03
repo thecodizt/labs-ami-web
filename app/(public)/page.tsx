@@ -11,6 +11,7 @@ import { TimelineComponent } from "@/components/ui/timeline";
 import FullPageVideoOverlay from "@/components/ui/video-overlay";
 import { Avatar } from "@radix-ui/react-avatar";
 import { AvatarImage } from "@/components/ui/avatar";
+import AnimatedNumber from "@/components/ui/animate-number";
 
 const container = {
 	hidden: { opacity: 1, scale: 0 },
@@ -336,6 +337,85 @@ export default function Home() {
 							</MoveUpFadeInSection>
 						</div>
 					</div>
+				</FadeInSection>
+
+				<FadeInSection className="hidden lg:flex w-full relative items-center justify-center">
+					<MoveUpFadeInSection className="h-[500px] w-full relative flex flex-col items-center justify-center gap-4">
+						<Image
+							src={"/images/hero/globe.png"}
+							alt=""
+							width={1000}
+							height={600}
+							className="object-contain absolute"
+						/>
+					</MoveUpFadeInSection>
+
+					<MoveUpFadeInSection
+						delay={0.2}
+						className="absolute top-[100px] left-[200px] w-[200px] rounded-lg bg-orange-200 border border-1 border-orange-500 border-b-4 border-r-4 flex flex-col items-center justify-center gap-2 p-4 text-center"
+					>
+						<div className="text-5xl font-[Sora] text-orange-500 font-semibold">
+							<AnimatedNumber
+								start={0}
+								end={20}
+								duration={1000}
+								className="text-orange-500"
+							/>
+							+
+						</div>
+						<div className="text-slate-600">Countries</div>
+					</MoveUpFadeInSection>
+					<MoveUpFadeInSection
+						delay={0.4}
+						className="absolute top-[100px] right-[200px] w-[200px] rounded-lg bg-blue-100 border border-1 border-blue-500 border-b-4 border-r-4 flex flex-col items-center justify-center gap-2 p-4 text-center"
+					>
+						<div className="text-5xl font-[Sora] text-blue-500 font-semibold">
+							<AnimatedNumber
+								start={0}
+								end={50}
+								duration={1000}
+								className="text-blue-500"
+							/>
+							M$
+						</div>
+						<div className="text-slate-600">Transaction/Month</div>
+					</MoveUpFadeInSection>
+					<MoveUpFadeInSection
+						delay={0.6}
+						className="absolute bottom-[100px] left-[200px] w-[200px] rounded-lg bg-blue-100 border border-1 border-blue-500 border-b-4 border-r-4 flex flex-col items-center justify-center gap-2 p-4 text-center"
+					>
+						<div className="text-5xl font-[Sora] text-blue-500 font-semibold">
+							<AnimatedNumber
+								start={0}
+								end={2500}
+								duration={1000}
+								className="text-blue-500"
+							/>
+							+
+						</div>
+						<div className="text-slate-600">Customers</div>
+					</MoveUpFadeInSection>
+					<MoveUpFadeInSection
+						delay={0.8}
+						className="absolute bottom-[100px] right-[200px] w-[200px] rounded-lg bg-orange-200 border border-1 border-orange-500 border-b-4 border-r-4 flex flex-col items-center justify-center gap-2 p-4 text-center"
+					>
+						<div className="text-5xl font-[Sora] text-orange-500 font-semibold">
+							<AnimatedNumber
+								start={0}
+								end={24}
+								duration={1000}
+								className="text-orange-500"
+							/>
+							/
+							<AnimatedNumber
+								start={0}
+								end={7}
+								duration={1000}
+								className="text-orange-500"
+							/>
+						</div>
+						<div className="text-slate-600">Support</div>
+					</MoveUpFadeInSection>
 				</FadeInSection>
 
 				<Footer />
