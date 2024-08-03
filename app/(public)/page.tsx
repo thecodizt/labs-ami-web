@@ -9,6 +9,8 @@ import { Footer } from "@/components/footer";
 import { MoveUpFadeInSection } from "@/components/ui/move-up-fade-in-section";
 import { TimelineComponent } from "@/components/ui/timeline";
 import FullPageVideoOverlay from "@/components/ui/video-overlay";
+import { Avatar } from "@radix-ui/react-avatar";
+import { AvatarImage } from "@/components/ui/avatar";
 
 const container = {
 	hidden: { opacity: 1, scale: 0 },
@@ -80,13 +82,13 @@ export default function Home() {
 							<Header />
 							<div className="h-full w-full flex flex-col items-center justify-center gap-4 p-8 text-center ">
 								<motion.ul
-									className="h-full w-full flex items-start justify-center gap-16 lg:p-8 text-center"
+									className="h-full w-full flex items-center justify-center gap-16 lg:p-8 text-center"
 									variants={container}
 									initial="hidden"
 									animate={inView ? "visible" : "hidden"}
 								>
 									<motion.li
-										className="w-[40%] flex flex-col gap-1 h-full"
+										className="w-[40%] flex flex-col items-center justify-center gap-1 h-full"
 										variants={item}
 									>
 										<div className="bg-gradient-to-r from-BLUE via-GOLD to-GOLD bg-clip-text text-transparent text-5xl font-bold font-[Sora] text-left leading-tight">
@@ -96,7 +98,10 @@ export default function Home() {
 											solutions for your business.
 										</div>
 									</motion.li>
-									<motion.li variants={item} className="h-full w-[60%] flex items-center justify-center">
+									<motion.li
+										variants={item}
+										className="h-full w-[60%] flex items-center justify-center"
+									>
 										<Image
 											src={"/images/hero/main.png"}
 											alt=""
@@ -129,6 +134,210 @@ export default function Home() {
 					</div>
 				</FadeInSection>
 
+				<FadeInSection className="hidden lg:flex w-full relative items-center justify-center">
+					<div className="rounded-lg h-full w-full bg-PURPLE text-white shadow-sm flex flex-col p-4 py-8 items-center">
+						<MoveUpFadeInSection className="bg-gradient-to-b from-slate-800 to-slate-600 text-white text-2xl font-bold font-[Sora] text-center p-4 rounded-lg">
+							Our Strengths
+						</MoveUpFadeInSection>
+						<div className="p-8 flex flex-wrap gap-4 items-center justify-center">
+							<MoveUpFadeInSection className="max-w-[400px] bg-gradient-to-b from-slate-700 to-slate-900 rounded-lg shadow-sm flex flex-col gap-8 p-8 h-full w-full items-center justify-between">
+								<Image
+									src={"/images/company/person1.png"}
+									alt=""
+									width={700}
+									height={500}
+									className="object-contain"
+								/>
+
+								<div className="flex flex-col gap-2 w-full justify-center items-center">
+									<div className="text-2xl font-[Sora] text-white font-semibold">
+										Jumesh Walia
+									</div>
+
+									<div className="font-[Sora] text-white">
+										CEO
+									</div>
+								</div>
+
+								<div className="flex items-center justify-center gap-4 w-full">
+									<Avatar>
+										<AvatarImage
+											src={
+												"/images/countries/united-states.png"
+											}
+											alt=""
+										/>
+									</Avatar>
+									<Avatar>
+										<AvatarImage
+											src={"/images/countries/canada.png"}
+											alt=""
+										/>
+									</Avatar>
+									<Avatar>
+										<AvatarImage
+											src={"/images/countries/india.png"}
+											alt=""
+										/>
+									</Avatar>
+								</div>
+							</MoveUpFadeInSection>
+							<MoveUpFadeInSection className="max-w-[400px] bg-gradient-to-b from-slate-700 to-slate-900 rounded-lg shadow-sm flex flex-col gap-8 p-8 h-full w-full items-center justify-between">
+								<Image
+									src={"/images/company/person2.png"}
+									alt=""
+									width={700}
+									height={500}
+									className="object-contain"
+								/>
+
+								<div className="flex flex-col gap-2 w-full justify-center items-center">
+									<div className="text-2xl font-[Sora] text-white font-semibold">
+										Ramneek Kochar
+									</div>
+
+									<div className="font-[Sora] text-white">
+										National Sales Director
+									</div>
+								</div>
+
+								<div className="flex items-center justify-center gap-4 w-full">
+									<Avatar>
+										<AvatarImage
+											src={"/images/countries/canada.png"}
+											alt=""
+										/>
+									</Avatar>
+									<Avatar>
+										<AvatarImage
+											src={"/images/countries/india.png"}
+											alt=""
+										/>
+									</Avatar>
+								</div>
+							</MoveUpFadeInSection>
+							<MoveUpFadeInSection className="max-w-[400px] bg-gradient-to-b from-slate-700 to-slate-900 rounded-lg shadow-sm flex flex-col gap-8 p-8 h-full w-full items-center justify-between">
+								<Image
+									src={"/images/company/person3.png"}
+									alt=""
+									width={700}
+									height={500}
+									className="object-contain"
+								/>
+
+								<div className="flex flex-col gap-2 w-full justify-center items-center">
+									<div className="text-2xl font-[Sora] text-white font-semibold">
+										Sivaram Elangovan
+									</div>
+
+									<div className="font-[Sora] text-white">
+										COO
+									</div>
+								</div>
+
+								<div className="flex items-center justify-center gap-4 w-full">
+									<Avatar>
+										<AvatarImage
+											src={
+												"/images/countries/united-states.png"
+											}
+											alt=""
+										/>
+									</Avatar>
+									<Avatar>
+										<AvatarImage
+											src={"/images/countries/canada.png"}
+											alt=""
+										/>
+									</Avatar>
+								</div>
+							</MoveUpFadeInSection>
+							<MoveUpFadeInSection className="max-w-[400px] bg-gradient-to-b from-slate-700 to-slate-900 rounded-lg shadow-sm flex flex-col gap-8 p-8 h-full w-full items-center justify-between">
+								<Image
+									src={"/images/company/person1.png"}
+									alt=""
+									width={700}
+									height={500}
+									className="object-contain"
+								/>
+
+								<div className="flex flex-col gap-2 w-full justify-center items-center">
+									<div className="text-2xl font-[Sora] text-white font-semibold">
+										Jumesh Walia
+									</div>
+
+									<div className="font-[Sora] text-white">
+										CEO
+									</div>
+								</div>
+
+								<div className="flex items-center justify-center gap-4 w-full">
+									<Avatar>
+										<AvatarImage
+											src={
+												"/images/countries/united-states.png"
+											}
+											alt=""
+										/>
+									</Avatar>
+									<Avatar>
+										<AvatarImage
+											src={"/images/countries/canada.png"}
+											alt=""
+										/>
+									</Avatar>
+								</div>
+							</MoveUpFadeInSection>
+							<MoveUpFadeInSection className="max-w-[400px] bg-gradient-to-b from-slate-700 to-slate-900 rounded-lg shadow-sm flex flex-col gap-8 p-8 h-full w-full items-center justify-between">
+								<Image
+									src={"/images/company/person1.png"}
+									alt=""
+									width={700}
+									height={500}
+									className="object-contain"
+								/>
+
+								<div className="flex flex-col gap-2 w-full justify-center items-center">
+									<div className="text-2xl font-[Sora] text-white font-semibold">
+										Jumesh Walia
+									</div>
+
+									<div className="font-[Sora] text-white">
+										CEO
+									</div>
+								</div>
+
+								<div className="flex items-center justify-center gap-4 w-full">
+									<Avatar>
+										<AvatarImage
+											src={
+												"/images/countries/united-states.png"
+											}
+											alt=""
+										/>
+									</Avatar>
+									<Avatar>
+										<AvatarImage
+											src={
+												"/images/countries/united-states.png"
+											}
+											alt=""
+										/>
+									</Avatar>
+									<Avatar>
+										<AvatarImage
+											src={
+												"/images/countries/united-states.png"
+											}
+											alt=""
+										/>
+									</Avatar>
+								</div>
+							</MoveUpFadeInSection>
+						</div>
+					</div>
+				</FadeInSection>
+
 				<Footer />
 			</div>
 
@@ -155,7 +364,10 @@ export default function Home() {
 											solutions for your business.
 										</div>
 									</motion.li>
-									<motion.li variants={item} className="h-full w-full flex items-center justify-center">
+									<motion.li
+										variants={item}
+										className="h-full w-full flex items-center justify-center"
+									>
 										<Image
 											src={"/images/hero/main.png"}
 											alt=""
@@ -176,6 +388,210 @@ export default function Home() {
 							Our Journey
 						</MoveUpFadeInSection>
 						<TimelineComponent data={timelineData} />
+					</div>
+				</FadeInSection>
+
+				<FadeInSection className="flex w-full relative items-center justify-center">
+					<div className="rounded-lg h-full w-full bg-PURPLE text-white shadow-sm flex flex-col p-4 py-8 items-center">
+						<MoveUpFadeInSection className="bg-gradient-to-b from-slate-800 to-slate-600 text-white text-2xl font-bold font-[Sora] text-center p-4 rounded-lg">
+							Our Strengths
+						</MoveUpFadeInSection>
+						<div className="p-8 flex flex-wrap gap-4 items-center justify-center">
+							<MoveUpFadeInSection className="max-w-[400px] bg-gradient-to-b from-slate-700 to-slate-900 rounded-lg shadow-sm flex flex-col gap-8 p-8 h-full w-full items-center justify-between">
+								<Image
+									src={"/images/company/person1.png"}
+									alt=""
+									width={700}
+									height={500}
+									className="object-contain"
+								/>
+
+								<div className="flex flex-col gap-2 w-full justify-center items-center">
+									<div className="text-2xl font-[Sora] text-white font-semibold">
+										Jumesh Walia
+									</div>
+
+									<div className="font-[Sora] text-white">
+										CEO
+									</div>
+								</div>
+
+								<div className="flex items-center justify-center gap-4 w-full">
+									<Avatar>
+										<AvatarImage
+											src={
+												"/images/countries/united-states.png"
+											}
+											alt=""
+										/>
+									</Avatar>
+									<Avatar>
+										<AvatarImage
+											src={"/images/countries/canada.png"}
+											alt=""
+										/>
+									</Avatar>
+									<Avatar>
+										<AvatarImage
+											src={"/images/countries/india.png"}
+											alt=""
+										/>
+									</Avatar>
+								</div>
+							</MoveUpFadeInSection>
+							<MoveUpFadeInSection className="max-w-[400px] bg-gradient-to-b from-slate-700 to-slate-900 rounded-lg shadow-sm flex flex-col gap-8 p-8 h-full w-full items-center justify-between">
+								<Image
+									src={"/images/company/person2.png"}
+									alt=""
+									width={700}
+									height={500}
+									className="object-contain"
+								/>
+
+								<div className="flex flex-col gap-2 w-full justify-center items-center">
+									<div className="text-2xl font-[Sora] text-white font-semibold">
+										Ramneek Kochar
+									</div>
+
+									<div className="font-[Sora] text-white">
+										National Sales Director
+									</div>
+								</div>
+
+								<div className="flex items-center justify-center gap-4 w-full">
+									<Avatar>
+										<AvatarImage
+											src={"/images/countries/canada.png"}
+											alt=""
+										/>
+									</Avatar>
+									<Avatar>
+										<AvatarImage
+											src={"/images/countries/india.png"}
+											alt=""
+										/>
+									</Avatar>
+								</div>
+							</MoveUpFadeInSection>
+							<MoveUpFadeInSection className="max-w-[400px] bg-gradient-to-b from-slate-700 to-slate-900 rounded-lg shadow-sm flex flex-col gap-8 p-8 h-full w-full items-center justify-between">
+								<Image
+									src={"/images/company/person3.png"}
+									alt=""
+									width={700}
+									height={500}
+									className="object-contain"
+								/>
+
+								<div className="flex flex-col gap-2 w-full justify-center items-center">
+									<div className="text-2xl font-[Sora] text-white font-semibold">
+										Sivaram Elangovan
+									</div>
+
+									<div className="font-[Sora] text-white">
+										COO
+									</div>
+								</div>
+
+								<div className="flex items-center justify-center gap-4 w-full">
+									<Avatar>
+										<AvatarImage
+											src={
+												"/images/countries/united-states.png"
+											}
+											alt=""
+										/>
+									</Avatar>
+									<Avatar>
+										<AvatarImage
+											src={"/images/countries/canada.png"}
+											alt=""
+										/>
+									</Avatar>
+								</div>
+							</MoveUpFadeInSection>
+							<MoveUpFadeInSection className="max-w-[400px] bg-gradient-to-b from-slate-700 to-slate-900 rounded-lg shadow-sm flex flex-col gap-8 p-8 h-full w-full items-center justify-between">
+								<Image
+									src={"/images/company/person1.png"}
+									alt=""
+									width={700}
+									height={500}
+									className="object-contain"
+								/>
+
+								<div className="flex flex-col gap-2 w-full justify-center items-center">
+									<div className="text-2xl font-[Sora] text-white font-semibold">
+										Jumesh Walia
+									</div>
+
+									<div className="font-[Sora] text-white">
+										CEO
+									</div>
+								</div>
+
+								<div className="flex items-center justify-center gap-4 w-full">
+									<Avatar>
+										<AvatarImage
+											src={
+												"/images/countries/united-states.png"
+											}
+											alt=""
+										/>
+									</Avatar>
+									<Avatar>
+										<AvatarImage
+											src={"/images/countries/canada.png"}
+											alt=""
+										/>
+									</Avatar>
+								</div>
+							</MoveUpFadeInSection>
+							<MoveUpFadeInSection className="max-w-[400px] bg-gradient-to-b from-slate-700 to-slate-900 rounded-lg shadow-sm flex flex-col gap-8 p-8 h-full w-full items-center justify-between">
+								<Image
+									src={"/images/company/person1.png"}
+									alt=""
+									width={700}
+									height={500}
+									className="object-contain"
+								/>
+
+								<div className="flex flex-col gap-2 w-full justify-center items-center">
+									<div className="text-2xl font-[Sora] text-white font-semibold">
+										Jumesh Walia
+									</div>
+
+									<div className="font-[Sora] text-white">
+										CEO
+									</div>
+								</div>
+
+								<div className="flex items-center justify-center gap-4 w-full">
+									<Avatar>
+										<AvatarImage
+											src={
+												"/images/countries/united-states.png"
+											}
+											alt=""
+										/>
+									</Avatar>
+									<Avatar>
+										<AvatarImage
+											src={
+												"/images/countries/united-states.png"
+											}
+											alt=""
+										/>
+									</Avatar>
+									<Avatar>
+										<AvatarImage
+											src={
+												"/images/countries/united-states.png"
+											}
+											alt=""
+										/>
+									</Avatar>
+								</div>
+							</MoveUpFadeInSection>
+						</div>
 					</div>
 				</FadeInSection>
 

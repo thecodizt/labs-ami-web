@@ -110,52 +110,67 @@ const Header = ({
 						/>
 					</div>
 
-					<div className="hidden lg:flex items-center justify-between gap-4">
-						<div className="bg-gradient-to-r from-GOLD to-BLUE rounded-full p-[2px] hover:shadow-sm">
-							<Avatar>
-								<AvatarImage
-									src={selectedCountry.image}
-									alt={selectedCountry.name}
-								/>
-							</Avatar>
-						</div>
-						<div>{selectedCountry.name}</div>
-						<DropdownMenu>
-							<DropdownMenuTrigger className="flex items-center gap-2">
-								<ChevronDownIcon className="h-4 w-4" />
-							</DropdownMenuTrigger>
-							<DropdownMenuContent>
-								<DropdownMenuLabel>
-									Select Country
-								</DropdownMenuLabel>
-								<DropdownMenuSeparator />
-								{countries.map((country, index) => (
-									<DropdownMenuItem
-										key={index}
-										onSelect={(e) => e.preventDefault()}
-									>
-										<div
-											className="flex items-center gap-2 p-4 hover:bg-muted w-full cursor-pointer"
-											onClick={() => {
-												setSelectedCountry(country);
-												showOverlay(
-													country.desktopvideo,
-													country.href
-												);
-											}}
+					<div className="hidden lg:flex items-center justify-between gap-[100px]">
+						<Button
+							variant="ghost"
+							onClick={() => router.push("/about")}
+							className={
+								" rounded-full p-[2px] hover:shadow-sm text-lg" +
+								(active === "about"
+									? " bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent"
+									: "")
+							}
+						>
+							About Us
+						</Button>
+
+						<div className="flex gap-4 items-center">
+							<div className="bg-gradient-to-r from-GOLD to-BLUE rounded-full p-[2px] hover:shadow-sm">
+								<Avatar>
+									<AvatarImage
+										src={selectedCountry.image}
+										alt={selectedCountry.name}
+									/>
+								</Avatar>
+							</div>
+							<div>{selectedCountry.name}</div>
+							<DropdownMenu>
+								<DropdownMenuTrigger className="flex items-center gap-2">
+									<ChevronDownIcon className="h-4 w-4" />
+								</DropdownMenuTrigger>
+								<DropdownMenuContent>
+									<DropdownMenuLabel>
+										Select Country
+									</DropdownMenuLabel>
+									<DropdownMenuSeparator />
+									{countries.map((country, index) => (
+										<DropdownMenuItem
+											key={index}
+											onSelect={(e) => e.preventDefault()}
 										>
-											<Avatar>
-												<AvatarImage
-													src={country.image}
-													alt={country.name}
-												/>
-											</Avatar>
-											<span>{country.name}</span>
-										</div>
-									</DropdownMenuItem>
-								))}
-							</DropdownMenuContent>
-						</DropdownMenu>
+											<div
+												className="flex items-center gap-2 p-4 hover:bg-muted w-full cursor-pointer"
+												onClick={() => {
+													setSelectedCountry(country);
+													showOverlay(
+														country.desktopvideo,
+														country.href
+													);
+												}}
+											>
+												<Avatar>
+													<AvatarImage
+														src={country.image}
+														alt={country.name}
+													/>
+												</Avatar>
+												<span>{country.name}</span>
+											</div>
+										</DropdownMenuItem>
+									))}
+								</DropdownMenuContent>
+							</DropdownMenu>
+						</div>
 					</div>
 
 					<div className="block lg:hidden">
@@ -172,6 +187,25 @@ const Header = ({
 									initial="hidden"
 									animate="visible"
 								>
+									<motion.li
+										className="text-sm w-full flex items-center justify-center text-center py-4 gap-4"
+										variants={item}
+									>
+										<Button
+											variant="ghost"
+											onClick={() =>
+												router.push("/about")
+											}
+											className={
+												" rounded-full p-[2px] hover:shadow-sm text-lg" +
+												(active === "about"
+													? " bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent"
+													: "")
+											}
+										>
+											About Us
+										</Button>
+									</motion.li>
 									<motion.li
 										className="text-sm w-full text-center py-4"
 										variants={item}

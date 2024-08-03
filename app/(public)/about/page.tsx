@@ -228,7 +228,7 @@ const AboutPage = () => {
 						</div>
 					</div>
 
-					<div className="bg-SKYBLUE rounded-lg shadow-sm flex gap-8 py-8 px-12 h-full w-full items-center justify-between">
+					{/* <div className="bg-SKYBLUE rounded-lg shadow-sm flex gap-8 py-8 px-12 h-full w-full items-center justify-between">
 						<MoveUpFadeInSection
 							delay={0.8}
 							duration={0.2}
@@ -246,7 +246,7 @@ const AboutPage = () => {
 								<MoveRight className="animate-pulse px-1" />
 							</Button>
 						</MoveUpFadeInSection>
-					</div>
+					</div> */}
 				</div>
 
 				<div className="min-h-screen h-full w-full snap-start p-2">
@@ -513,7 +513,7 @@ const AboutPage = () => {
 				</div>
 
 				<div className="min-h-screen h-full w-full snap-start p-2 flex flex-col items-center justify-center gap-4">
-					<div className="bg-SKYBLUE rounded-lg shadow-sm flex gap-4 p-4 w-full items-center justify-between">
+					{/* <div className="bg-SKYBLUE rounded-lg shadow-sm flex gap-4 p-4 w-full items-center justify-between">
 						<div className="w-full flex items-center justify-center">
 							<MoveUpFadeInSection>
 								<span>
@@ -527,7 +527,7 @@ const AboutPage = () => {
 								</Button>
 							</MoveUpFadeInSection>
 						</div>
-					</div>
+					</div> */}
 					<div className="h-full w-full flex flex-col gap-2">
 						<div className="bg-white rounded-lg shadow-sm flex flex-col p-4 h-full items-start justify-between">
 							<Image
