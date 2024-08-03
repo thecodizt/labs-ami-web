@@ -291,20 +291,20 @@ export default function Home() {
 							</MoveUpFadeInSection>
 							<MoveUpFadeInSection className="max-w-[400px] bg-gradient-to-b from-slate-700 to-slate-900 rounded-lg shadow-sm flex flex-col gap-8 p-8 h-full w-full items-center justify-between">
 								<Image
-									src={"/images/company/person1.png"}
+									src={"/images/company/person-5.png"}
 									alt=""
-									width={700}
+									width={500}
 									height={500}
 									className="object-contain"
 								/>
 
 								<div className="flex flex-col gap-2 w-full justify-center items-center">
 									<div className="text-2xl font-[Sora] text-white font-semibold">
-										Jumesh Walia
+										Sankaganidhi Prakash
 									</div>
 
 									<div className="font-[Sora] text-white">
-										CEO
+										Operations Manager
 									</div>
 								</div>
 
@@ -319,17 +319,7 @@ export default function Home() {
 									</Avatar>
 									<Avatar>
 										<AvatarImage
-											src={
-												"/images/countries/united-states.png"
-											}
-											alt=""
-										/>
-									</Avatar>
-									<Avatar>
-										<AvatarImage
-											src={
-												"/images/countries/united-states.png"
-											}
+											src={"/images/countries/canada.png"}
 											alt=""
 										/>
 									</Avatar>
@@ -363,7 +353,7 @@ export default function Home() {
 							/>
 							+
 						</div>
-						<div className="text-slate-600">Countries</div>
+						<div className="text-slate-600">Team Members</div>
 					</MoveUpFadeInSection>
 					<MoveUpFadeInSection
 						delay={0.4}
@@ -387,13 +377,13 @@ export default function Home() {
 						<div className="text-5xl font-[Sora] text-blue-500 font-semibold">
 							<AnimatedNumber
 								start={0}
-								end={2500}
+								end={5000}
 								duration={1000}
 								className="text-blue-500"
 							/>
 							+
 						</div>
-						<div className="text-slate-600">Customers</div>
+						<div className="text-slate-600">Merchants</div>
 					</MoveUpFadeInSection>
 					<MoveUpFadeInSection
 						delay={0.8}
@@ -563,7 +553,7 @@ export default function Home() {
 								/>
 
 								<div className="flex flex-col gap-2 w-full justify-center items-center">
-									<div className="text-2xl font-[Sora] text-white font-semibold">
+									<div className="text-2xl font-[Sora] text-white font-semibold text-center w-full">
 										Sivaram Elangovan
 									</div>
 
@@ -627,7 +617,7 @@ export default function Home() {
 							</MoveUpFadeInSection>
 							<MoveUpFadeInSection className="max-w-[400px] bg-gradient-to-b from-slate-700 to-slate-900 rounded-lg shadow-sm flex flex-col gap-8 p-8 h-full w-full items-center justify-between">
 								<Image
-									src={"/images/company/person1.png"}
+									src={"/images/company/person-5.png"}
 									alt=""
 									width={700}
 									height={500}
@@ -635,12 +625,12 @@ export default function Home() {
 								/>
 
 								<div className="flex flex-col gap-2 w-full justify-center items-center">
-									<div className="text-2xl font-[Sora] text-white font-semibold">
-										Jumesh Walia
+									<div className="text-2xl font-[Sora] text-white font-semibold text-center w-full">
+										Sankaganidhi Prakash
 									</div>
 
 									<div className="font-[Sora] text-white">
-										CEO
+										Operations Manager
 									</div>
 								</div>
 
@@ -656,15 +646,7 @@ export default function Home() {
 									<Avatar>
 										<AvatarImage
 											src={
-												"/images/countries/united-states.png"
-											}
-											alt=""
-										/>
-									</Avatar>
-									<Avatar>
-										<AvatarImage
-											src={
-												"/images/countries/united-states.png"
+												"/images/countries/canada.png"
 											}
 											alt=""
 										/>
@@ -673,6 +655,75 @@ export default function Home() {
 							</MoveUpFadeInSection>
 						</div>
 					</div>
+				</FadeInSection>
+
+				<FadeInSection className="flex flex-col gap-4 w-full items-center justify-center rounded-lg bg-gradient-to-b from-orange-100 to-orange-50 p-4">
+					<MoveUpFadeInSection
+						delay={0.2}
+						className="h-full w-full rounded-lg bg-orange-200 border border-1 border-orange-500 border-b-4 border-r-4 flex flex-col items-center justify-center gap-2 p-4 text-center"
+					>
+						<div className="text-5xl font-[Sora] text-orange-500 font-semibold">
+							<AnimatedNumber
+								start={0}
+								end={20}
+								duration={1000}
+								className="text-orange-500"
+							/>
+							+
+						</div>
+						<div className="text-slate-600">Team Members</div>
+					</MoveUpFadeInSection>
+					<MoveUpFadeInSection
+						delay={0.4}
+						className="h-full w-full rounded-lg bg-blue-100 border border-1 border-blue-500 border-b-4 border-r-4 flex flex-col items-center justify-center gap-2 p-4 text-center"
+					>
+						<div className="text-5xl font-[Sora] text-blue-500 font-semibold">
+							<AnimatedNumber
+								start={0}
+								end={50}
+								duration={1000}
+								className="text-blue-500"
+							/>
+							M$
+						</div>
+						<div className="text-slate-600">Transaction/Month</div>
+					</MoveUpFadeInSection>
+					<MoveUpFadeInSection
+						delay={0.8}
+						className="h-full w-full rounded-lg bg-orange-200 border border-1 border-orange-500 border-b-4 border-r-4 flex flex-col items-center justify-center gap-2 p-4 text-center"
+					>
+						<div className="text-5xl font-[Sora] text-orange-500 font-semibold">
+							<AnimatedNumber
+								start={0}
+								end={24}
+								duration={1000}
+								className="text-orange-500"
+							/>
+							/
+							<AnimatedNumber
+								start={0}
+								end={7}
+								duration={1000}
+								className="text-orange-500"
+							/>
+						</div>
+						<div className="text-slate-600">Support</div>
+					</MoveUpFadeInSection>
+					<MoveUpFadeInSection
+						delay={0.6}
+						className="h-full w-full rounded-lg bg-blue-100 border border-1 border-blue-500 border-b-4 border-r-4 flex flex-col items-center justify-center gap-2 p-4 text-center"
+					>
+						<div className="text-5xl font-[Sora] text-blue-500 font-semibold">
+							<AnimatedNumber
+								start={0}
+								end={5000}
+								duration={1000}
+								className="text-blue-500"
+							/>
+							+
+						</div>
+						<div className="text-slate-600">Merchants</div>
+					</MoveUpFadeInSection>
 				</FadeInSection>
 
 				<Footer />
