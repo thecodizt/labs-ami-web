@@ -27,7 +27,7 @@ const VideoOverlay: React.FC<VideoOverlayProps> = ({
 
   const handleVideoEnd = () => {
     onClose();
-    router.push(redirectUrl);
+    window.open(redirectUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (

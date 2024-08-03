@@ -1,8 +1,6 @@
 "use client";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
-import { Input } from "./ui/input";
-import Image from "next/image";
 import { MoveUpFadeInSection } from "./ui/move-up-fade-in-section";
 import { InfiniteMovingCardsFooter } from "./ui/infinite-moving-cards-footer";
 
@@ -37,10 +35,10 @@ const Footer = () => {
 						Seamless, secure and <br /> swift payments.
 					</MoveUpFadeInSection>
 
-					<MoveUpFadeInSection className="bg-gradient-to-br from-GOLD to-BLUE rounded-full p-[2px]">
+					{/* <MoveUpFadeInSection className="bg-gradient-to-br from-GOLD to-BLUE rounded-full p-[2px]">
 						<Button
 							variant={"ghost"}
-							onClick={() => router.push("/contact-us")}
+							onClick={() => router.push("https://www.americanmerchantsinc.com/contact/")}
 							className={
 								"rounded-full h-full w-full p-4 bg-PURPLE hover:bg-PURPLE text-white text-sm"
 							}
@@ -48,7 +46,7 @@ const Footer = () => {
 						>
 							Book a Consultation
 						</Button>
-					</MoveUpFadeInSection>
+					</MoveUpFadeInSection> */}
 				</div>
 				<div className="w-full flex items-center justify-between gap-4 text-3xl">
 					{/* <MoveUpFadeInSection className="flex flex-col gap-2 w-full">
@@ -99,7 +97,7 @@ const Footer = () => {
 						Seamless, secure and <br /> swift payments.
 					</MoveUpFadeInSection>
 
-					<MoveUpFadeInSection className="bg-gradient-to-br from-GOLD to-BLUE rounded-full p-[2px]">
+					{/* <MoveUpFadeInSection className="bg-gradient-to-br from-GOLD to-BLUE rounded-full p-[2px]">
 						<Button
 							variant={"ghost"}
 							onClick={() => router.push("/contact-us")}
@@ -110,7 +108,7 @@ const Footer = () => {
 						>
 							Book a Consultation
 						</Button>
-					</MoveUpFadeInSection>
+					</MoveUpFadeInSection> */}
 				</div>
 
 				<div className="w-full flex items-center justify-between gap-4 text-3xl">
