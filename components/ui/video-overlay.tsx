@@ -1,47 +1,50 @@
-"use client";
-import React, { useState } from 'react';
-import { createPortal } from 'react-dom';
-import { useRouter } from 'next/navigation';
+import React, { useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 
 interface VideoOverlayProps {
-  trigger: React.ReactNode;
+  isVisible: boolean;
   videoPath: string;
-  url: string;
+  redirectUrl: string;
+  onClose: () => void;
 }
 
-const VideoOverlay: React.FC<VideoOverlayProps> = ({ trigger, videoPath, url }) => {
-  const [isOverlayVisible, setOverlayVisible] = useState(false);
+const VideoOverlay: React.FC<VideoOverlayProps> = ({
+  isVisible,
+  videoPath,
+  redirectUrl,
+  onClose,
+}) => {
   const router = useRouter();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (isVisible && videoRef.current) {
+      videoRef.current.play();
+    }
+  }, [isVisible]);
+
+  if (!isVisible) return null;
 
   const handleVideoEnd = () => {
-    setOverlayVisible(false);
-    router.push(url);
+    onClose();
+    router.push(redirectUrl);
   };
-
-  const handleClick = () => {
-    setOverlayVisible(true);
-  };
-
-  const overlayContent = (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
-      <video
-        src={videoPath}
-        className="w-full max-w-3xl"
-        autoPlay
-        onEnded={handleVideoEnd}
-        playsInline
-        style={{ outline: 'none' }}
-      />
-    </div>
-  );
 
   return (
-    <>
-      <div onClick={handleClick} style={{ cursor: 'pointer' }}>
-        {trigger}
-      </div>
-      {isOverlayVisible && createPortal(overlayContent, document.body)}
-    </>
+    <div className="fixed inset-0 bg-black z-50">
+      <video
+        ref={videoRef}
+        src={videoPath}
+        autoPlay
+        playsInline
+        muted // Add muted attribute to ensure autoplay works on all browsers
+        onEnded={handleVideoEnd}
+        className="w-full h-full object-cover"
+        style={{ position: 'absolute', top: 0, left: 0 }}
+      >
+        Your browser does not support the video tag.
+      </video>
+    </div>
   );
 };
 

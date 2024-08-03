@@ -8,6 +8,7 @@ import { FadeInSection } from "@/components/ui/fade-in-view";
 import { Footer } from "@/components/footer";
 import { MoveUpFadeInSection } from "@/components/ui/move-up-fade-in-section";
 import { TimelineComponent } from "@/components/ui/timeline";
+import FullPageVideoOverlay from "@/components/ui/video-overlay";
 
 const container = {
 	hidden: { opacity: 1, scale: 0 },
@@ -102,54 +103,6 @@ export default function Home() {
 										<Button className="bg-gradient-to-r from-BLUE to-GOLD text-white text-lg font-medium font-[Poppins] rounded-full gap-2">
 											<>Contact Us</>
 											<MoveRightIcon className="hover:scale-125 animate-pulse" />
-										</Button>
-									</motion.li>
-								</motion.ul>
-								<motion.ul
-									className="w-full h-full relative block lg:hidden"
-									variants={container}
-									initial="hidden"
-									animate="visible"
-								>
-									<motion.li
-										variants={item}
-										className="absolute w-full h-full"
-									>
-										<Image
-											src={"/images/hero/person.png"}
-											alt="Person"
-											width={600}
-											height={600}
-										/>
-									</motion.li>
-									<motion.li
-										variants={{
-											hidden: { x: 200, opacity: 0 },
-											visible: {
-												x: 0,
-												opacity: 1,
-											},
-										}}
-										className="absolute w-full h-full"
-									>
-										<Image
-											src={"/images/hero/machine.png"}
-											alt="Person"
-											width={150}
-											height={100}
-										/>
-									</motion.li>
-
-									<motion.li
-										variants={item}
-										className="absolute w-full bottom-[-110px] h-full flex items-center justify-center"
-									>
-										<Button
-											className="bg-gradient-to-r from-BLUE to-GOLD text-white font-medium font-[Poppins] rounded-full gap-2"
-											size={"sm"}
-										>
-											<>Contact Us</>
-											<MoveRightIcon className="animate-pulse" />
 										</Button>
 									</motion.li>
 								</motion.ul>
