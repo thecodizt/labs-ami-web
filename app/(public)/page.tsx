@@ -74,19 +74,19 @@ export default function Home() {
 	return (
 		<>
 			<div className="hidden lg:flex bg-gradient-to-b from-VIOLET via-GOLD to-white p-2 flex-col gap-2">
-				<FadeInSection className="min-h-[95vh] w-full flex flex-col bg-white rounded-lg shadow-lg p-4">
+				<FadeInSection className="min-h-[95vh] h-[95vh] w-full flex flex-col bg-white rounded-lg shadow-lg p-4">
 					{(inView: boolean) => (
 						<>
 							<Header />
 							<div className="h-full w-full flex flex-col items-center justify-center gap-4 p-8 text-center ">
 								<motion.ul
-									className="w-full flex flex-col items-start justify-center gap-16 lg:p-8 text-center"
+									className="h-full w-full flex items-start justify-center gap-16 lg:p-8 text-center"
 									variants={container}
 									initial="hidden"
 									animate={inView ? "visible" : "hidden"}
 								>
 									<motion.li
-										className="flex flex-col gap-1 w-full h-full"
+										className="w-[40%] flex flex-col gap-1 h-full"
 										variants={item}
 									>
 										<div className="bg-gradient-to-r from-BLUE via-GOLD to-GOLD bg-clip-text text-transparent text-5xl font-bold font-[Sora] text-left leading-tight">
@@ -95,6 +95,15 @@ export default function Home() {
 										<div className="text-xl lg:text-5xl font-bold font-[Sora] text-left">
 											solutions for your business.
 										</div>
+									</motion.li>
+									<motion.li variants={item} className="h-full w-[60%] flex items-center justify-center">
+										<Image
+											src={"/images/hero/main.png"}
+											alt=""
+											width={600}
+											height={600}
+											className="object-contain animate-pulse-scale"
+										/>
 									</motion.li>
 									{/* <motion.li
 										variants={item}
@@ -124,7 +133,7 @@ export default function Home() {
 			</div>
 
 			<div className="flex lg:hidden bg-gradient-to-b from-VIOLET via-GOLD to-white p-2 flex-col gap-2">
-				<FadeInSection className="min-h-[95vh] w-full flex flex-col bg-white rounded-lg shadow-lg p-4">
+				<FadeInSection className="min-h-[95vh] h-[95vh] w-full flex flex-col bg-white rounded-lg shadow-lg p-4">
 					{(inView: boolean) => (
 						<>
 							<Header />
@@ -139,12 +148,21 @@ export default function Home() {
 										className="flex flex-col gap-1 w-full h-full"
 										variants={item}
 									>
-										<div className="bg-gradient-to-r from-BLUE via-GOLD to-GOLD bg-clip-text text-transparent text-2xl font-bold font-[Sora] text-center leading-tight">
+										<div className="bg-gradient-to-r from-BLUE via-GOLD to-GOLD bg-clip-text text-transparent text-4xl font-bold font-[Sora] text-center leading-tight">
 											Seamless, secure and swift payment
 										</div>
-										<div className="text-2xl font-bold font-[Sora] text-center w-full">
+										<div className="text-4xl font-bold font-[Sora] text-center w-full">
 											solutions for your business.
 										</div>
+									</motion.li>
+									<motion.li variants={item} className="h-full w-full flex items-center justify-center">
+										<Image
+											src={"/images/hero/main.png"}
+											alt=""
+											width={600}
+											height={600}
+											className="object-contain animate-pulse-scale"
+										/>
 									</motion.li>
 								</motion.ul>
 							</div>
