@@ -9,16 +9,25 @@ const countries = [
 		country: "Canada",
 		address:
 			"AMI Merchants Services Inc 13841 Harper Road Surrey, BC Canada V3R 5L5",
+		addressLine1: "AMI Merchants Services Inc",
+		addressLine2: "13841 Harper Road Surrey",
+		addressLine3: "BC Canada V3R 5L5",
 	},
 	{
 		country: "United States",
 		address:
 			"American Merchants Inc 2219 W Olive Ave #106 Burbank, CA USA 91506",
+		addressLine1: "American Merchants Inc",
+		addressLine2: "2219 W Olive Ave #106",
+		addressLine3: "Burbank, CA USA 91506",
 	},
 	{
 		country: "India",
 		address:
 			"AMI Merchant Services Pvt Ltd Suite 120 Edmonton Mall The Bristol, Gurgaon, India",
+		addressLine1: "AMI Merchant Services Pvt Ltd",
+		addressLine2: "Suite 120 Edmonton Mall",
+		addressLine3: "The Bristol, Gurgaon, India",
 	},
 ];
 
@@ -112,26 +121,25 @@ export const InfiniteMovingCardsFooter = ({
 					pauseOnHover && "hover:[animation-play-state:paused]"
 				)}
 			>
-				{items.map(
-					(
-						item: { country: string; address: string },
-						idx: number
-					) => (
-						<li
-							className="w-[200px] p-6"
-							key={item.country}
-						>
-							<div className="flex flex-col gap-2">
-								<span className="text-xl font-bold bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent">
-									{item.country}
-								</span>
-								<span className="text-sm text-gray-100 font-thin">
-									{item.address}
-								</span>
-							</div>
-						</li>
-					)
-				)}
+				{items.map((item: any, idx: number) => (
+					<li
+						className="w-[200px] lg:w-[400px] p-6"
+						key={item.country}
+					>
+						<div className="flex flex-col gap-2">
+							<span className="text-xl font-bold bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent">
+								{item.country}
+							</span>
+							<span className="text-sm text-gray-100 font-thin">
+								{item.addressLine1}
+								<br />
+								{item.addressLine2}
+								<br />
+								{item.addressLine3}
+							</span>
+						</div>
+					</li>
+				))}
 			</ul>
 		</div>
 	);
