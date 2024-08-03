@@ -17,6 +17,38 @@ interface TimelineProps {
 }
 
 const TimelineItem: React.FC<TimelineItemProps> = ({ year, event, isLeft }) => {
+	if (isLeft) {
+		return (
+			<motion.li
+				className={`flex justify-center items-center w-full mb-8 ${
+					isLeft ? "flex-row-reverse" : ""
+				}`}
+				initial="hidden"
+				whileInView="visible"
+				exit="hidden"
+				viewport={{ once: false, amount: 0.8 }}
+				variants={{
+					visible: { opacity: 1, x: 0 },
+					hidden: { opacity: 0, x: 50 },
+				}}
+				transition={{ duration: 0.5 }}
+			>
+				<div className={`w-[90%] ${!isLeft ? " text-right" : ""}`}>
+					<div className="p-4">
+						<h3 className="text-3xl font-bold text-GOLD mb-1">
+							{year}
+						</h3>
+						<p className="text-white text-sm lg:text-md">{event}</p>
+					</div>
+				</div>
+				<div className="w-[10%] flex justify-center">
+					<div className="w-3 h-3 bg-GOLD shadow-sm rounded-full z-10"></div>
+				</div>
+				<div className="w-[90%]"></div>
+			</motion.li>
+		);
+	}
+
 	return (
 		<motion.li
 			className={`flex justify-center items-center w-full mb-8 ${
@@ -27,8 +59,8 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ year, event, isLeft }) => {
 			exit="hidden"
 			viewport={{ once: false, amount: 0.8 }}
 			variants={{
-				visible: { opacity: 1, y: 0 },
-				hidden: { opacity: 0, y: 50 },
+				visible: { opacity: 1, x: 0 },
+				hidden: { opacity: 0, x: -50 },
 			}}
 			transition={{ duration: 0.5 }}
 		>

@@ -96,7 +96,7 @@ export default function Home() {
 											solutions for your business.
 										</div>
 									</motion.li>
-									<motion.li
+									{/* <motion.li
 										variants={item}
 										className="hidden lg:block"
 									>
@@ -104,7 +104,7 @@ export default function Home() {
 											<>Contact Us</>
 											<MoveRightIcon className="hover:scale-125 animate-pulse" />
 										</Button>
-									</motion.li>
+									</motion.li> */}
 								</motion.ul>
 							</div>
 						</>
