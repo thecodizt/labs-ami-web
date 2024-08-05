@@ -75,12 +75,12 @@ const AboutPage = () => {
 								</motion.li>
 								<motion.li
 									variants={item}
-									className="absolute bottom-[50px] left-[0px]"
+									className="absolute bottom-[100px] left-[-70px]"
 								>
 									<Image
 										src={"/images/about/hero-2.png"}
 										alt=""
-										width={300}
+										width={230}
 										height={300}
 										className="object-contain animate-pulse-scale"
 									/>

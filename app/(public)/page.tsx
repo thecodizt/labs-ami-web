@@ -34,7 +34,6 @@ const item = {
 };
 
 const timelineData = [
-	{ year: 2010, event: "Company establishment" },
 	{
 		year: 2010,
 		event: "AMI was founded in 2010 and registered as an ISO with First Data Merchant Services",
@@ -57,7 +56,7 @@ const timelineData = [
 	},
 	{
 		year: 2016,
-		event: "AMI&apos;s vision of Global presence took a first step and established ISO services in INDIA in partnership with First Data and ICICI Bank",
+		event: "AMI's vision of Global presence took a first step and established ISO services in INDIA in partnership with First Data and ICICI Bank",
 	},
 	{
 		year: 2018,
