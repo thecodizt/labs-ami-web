@@ -1,10 +1,8 @@
 "use client";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
-import { Button } from "@/components/ui/button";
 import { MoveUpFadeInSection } from "@/components/ui/move-up-fade-in-section";
 import { motion } from "framer-motion";
-import { Move, MoveRight } from "lucide-react";
 import Image from "next/image";
 
 const container = {
@@ -52,8 +50,8 @@ const AboutPage = () => {
 										protecting sensitive financial
 										information with robust security
 										measures. We cater to the diverse needs
-										of modern businesses with comprehensive
-										payment processing services.
+										of all businesses with comprehensive
+										payment processing solutions.
 									</span>
 								</MoveUpFadeInSection>
 							</div>
@@ -260,12 +258,18 @@ const AboutPage = () => {
 								className="object-contain"
 							/>
 
-							<MoveUpFadeInSection className="w-full text-start text-4xl font-[Sora]" delay={0.2} >
+							<MoveUpFadeInSection
+								className="w-full text-start text-4xl font-[Sora]"
+								delay={0.2}
+							>
 								Our{" "}
 								<span className="font-semibold">Mission</span>
 							</MoveUpFadeInSection>
 
-							<MoveUpFadeInSection className="text-lg" delay={0.4}>
+							<MoveUpFadeInSection
+								className="text-lg"
+								delay={0.4}
+							>
 								We help businesses of all sizes pay, get paid,
 								optimize, and grow. By leveraging our
 								state-of-the-art payment solutions, businesses
@@ -297,14 +301,14 @@ const AboutPage = () => {
 								className="text-lg"
 								delay={0.4}
 							>
-								We help businesses of all sizes pay, get paid,
-								optimize, and grow. By leveraging our
-								state-of-the-art payment solutions, businesses
-								can streamline their payment processes, reduce
-								costs, and enhance their overall operational
-								efficiency. Our goal is to empower our partners
-								and merchants with the tools they need to
-								succeed in today&apos;s competitive market.
+								At AMI, we believe in building strong and
+								lasting relationships with our clients. We are
+								dedicated to understanding your unique needs and
+								providing customized solutions that align with
+								your business goals. With our commitment to
+								innovation, security, and customer satisfaction,
+								we strive to be your trusted partner in payment
+								processing.
 							</MoveUpFadeInSection>
 						</div>
 					</div>
@@ -385,14 +389,14 @@ const AboutPage = () => {
 								className="font-light text-lg text-center"
 								delay={0.2}
 							>
-								We help businesses of all sizes pay, get paid,
-								optimize, and grow. By leveraging our
-								state-of-the-art payment solutions, businesses
-								can streamline their payment processes, reduce
-								costs, and enhance their overall operational
-								efficiency. Our goal is to empower our partners
-								and merchants with the tools they need to
-								succeed in today&apos;s competitive market.
+								AMI is a leading payment processing company
+								offering versatile in-store, online, and mobile
+								solutions. Our advanced technology ensures fast,
+								efficient, and secure transactions, protecting
+								sensitive financial information with robust
+								security measures. We cater to the diverse needs
+								of all businesses with comprehensive payment
+								processing solutions.
 							</MoveUpFadeInSection>
 						</div>
 					</div>
@@ -566,14 +570,14 @@ const AboutPage = () => {
 								Our Vision
 							</MoveUpFadeInSection>
 							<MoveUpFadeInSection className="font-light text-xs">
-								We help businesses of all sizes pay, get paid,
-								optimize, and grow. By leveraging our
-								state-of-the-art payment solutions, businesses
-								can streamline their payment processes, reduce
-								costs, and enhance their overall operational
-								efficiency. Our goal is to empower our partners
-								and merchants with the tools they need to
-								succeed in today&apos;s competitive market.
+								At AMI, we believe in building strong and
+								lasting relationships with our clients. We are
+								dedicated to understanding your unique needs and
+								providing customized solutions that align with
+								your business goals. With our commitment to
+								innovation, security, and customer satisfaction,
+								we strive to be your trusted partner in payment
+								processing.
 							</MoveUpFadeInSection>
 						</div>
 					</div>

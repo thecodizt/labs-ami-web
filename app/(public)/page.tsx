@@ -37,39 +37,39 @@ const timelineData = [
 	{ year: 2010, event: "Company establishment" },
 	{
 		year: 2010,
-		event: "Registered as retail ISO with First Data with Wells Fargo bank as sponsoring bank",
+		event: "AMI was founded in 2010 and registered as an ISO with First Data Merchant Services",
 	},
 	{
 		year: 2011,
-		event: "Executed agent agreements with Petroleum Card services & Payment Logistics",
-	},
-	{
-		year: 2012,
-		event: "AMI decided to spread it&apos;s wings globally and launched in India",
+		event: "Established Agent level relationship with Petroleum Card Services & Payment Logistics",
 	},
 	{
 		year: 2013,
-		event: "AMI added ATM services under it&apos;s umbrella through Switch Commerce Partnership",
+		event: "AMI registers with First Data North platform to service broader business verticals ",
 	},
 	{
 		year: 2014,
-		event: "Signed a agent level agreement with ECS, iPayments to board high risk verticals",
+		event: "We added the cloud-based Android POS Clover POS systems into the arsenal of our POS",
 	},
 	{
 		year: 2015,
-		event: "Acheived a milestone of $50M / month in processing volume",
+		event: "AMI achieved a milestone of $500 million in annual sales volume in the USA",
+	},
+	{
+		year: 2016,
+		event: "AMI&apos;s vision of Global presence took a first step and established ISO services in INDIA in partnership with First Data and ICICI Bank",
 	},
 	{
 		year: 2018,
-		event: "Registered as an retail ISO with NPC Vantiv Worldpay with Fifth Third Bank as sponsoring bank",
+		event: "Registered with NPC Vantiv as a retail ISO through Fifth Third Bank",
 	},
 	{
 		year: 2020,
-		event: "AMI expanded its presence in North America with expansion of operation into Canada ",
+		event: "Established next global footprint with operations in Canada, making AMI a North American merchant services provider",
 	},
 	{
 		year: 2021,
-		event: "Registered as a retail ISO with Elavon with US Bank as sponsoring bank",
+		event: "Registered with Elavon as a retail ISO through US Bank",
 	},
 ];
 
@@ -357,18 +357,18 @@ export default function Home() {
 					</MoveUpFadeInSection>
 					<MoveUpFadeInSection
 						delay={0.4}
-						className="absolute top-[100px] right-[200px] w-[200px] rounded-lg bg-blue-100 border border-1 border-blue-500 border-b-4 border-r-4 flex flex-col items-center justify-center gap-2 p-4 text-center"
+						className="absolute top-[100px] right-[200px] w-[250px] rounded-lg bg-blue-100 border border-1 border-blue-500 border-b-4 border-r-4 flex flex-col items-center justify-center gap-2 p-4 text-center"
 					>
 						<div className="text-5xl font-[Sora] text-blue-500 font-semibold">
-							<AnimatedNumber
+							$<AnimatedNumber
 								start={0}
 								end={50}
 								duration={1000}
 								className="text-blue-500"
 							/>
-							M$
+							M
 						</div>
-						<div className="text-slate-600">Transaction/Month</div>
+						<div className="text-slate-600">Sales Volume/Month</div>
 					</MoveUpFadeInSection>
 					<MoveUpFadeInSection
 						delay={0.6}
@@ -678,15 +678,15 @@ export default function Home() {
 						className="h-full w-full rounded-lg bg-blue-100 border border-1 border-blue-500 border-b-4 border-r-4 flex flex-col items-center justify-center gap-2 p-4 text-center"
 					>
 						<div className="text-5xl font-[Sora] text-blue-500 font-semibold">
-							<AnimatedNumber
+							$<AnimatedNumber
 								start={0}
 								end={50}
 								duration={1000}
 								className="text-blue-500"
 							/>
-							M$
+							M
 						</div>
-						<div className="text-slate-600">Transaction/Month</div>
+						<div className="text-slate-600">Sales Volume/Month</div>
 					</MoveUpFadeInSection>
 					<MoveUpFadeInSection
 						delay={0.8}

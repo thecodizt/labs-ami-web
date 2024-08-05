@@ -73,7 +73,9 @@ const Header = ({
 	showOverlay?: (video: string, url: string) => void;
 }) => {
 	const router = useRouter();
-	const [selectedCountry, setSelectedCountry] = useState(countries[0]);
+	const [selectedCountry, setSelectedCountry] = useState<any>(countries[0]);
+	const [isSelectedCountry, setIsSelectedCountry] = useState(false);
+
 	const { isVisible, videoPath, redirectUrl, showOverlay, hideOverlay } =
 		useVideoOverlay();
 
@@ -125,17 +127,22 @@ const Header = ({
 						</Button>
 
 						<div className="flex gap-4 items-center">
-							<div className="bg-gradient-to-r from-GOLD to-BLUE rounded-full p-[2px] hover:shadow-sm">
-								<Avatar>
-									<AvatarImage
-										src={selectedCountry.image}
-										alt={selectedCountry.name}
-									/>
-								</Avatar>
-							</div>
-							<div>{selectedCountry.name}</div>
+							{isSelectedCountry && (
+								<>
+									<div className="bg-gradient-to-r from-GOLD to-BLUE rounded-full p-[2px] hover:shadow-sm">
+										<Avatar>
+											<AvatarImage
+												src={selectedCountry.image}
+												alt={selectedCountry.name}
+											/>
+										</Avatar>
+									</div>
+									<div>{selectedCountry.name}</div>
+								</>
+							)}
 							<DropdownMenu>
 								<DropdownMenuTrigger className="flex items-center gap-2">
+									<span>Choose a country</span>{" "}
 									<ChevronDownIcon className="h-4 w-4" />
 								</DropdownMenuTrigger>
 								<DropdownMenuContent>
