@@ -36,7 +36,7 @@ const AboutPage = () => {
 						<Header variant="dark" active={"about"} />
 						<div className="h-full w-full flex">
 							<div className="w-full h-full p-8 flex flex-col items-start justify-center gap-4">
-								<MoveUpFadeInSection className="text-6xl font-[Poppins] font-bold text-white">
+								<MoveUpFadeInSection className="text-7xl font-[Poppins] font-bold text-white">
 									About Us
 								</MoveUpFadeInSection>
 								<MoveUpFadeInSection
@@ -70,44 +70,44 @@ const AboutPage = () => {
 									<Image
 										src={"/images/about/hero-1.png"}
 										alt=""
-										width={400}
-										height={500}
+										width={500}
+										height={600}
 										className="object-contain animate-pulse-scale"
 									/>
 								</motion.li>
 								<motion.li
 									variants={item}
-									className="absolute bottom-[100px] left-[100px]"
+									className="absolute bottom-[50px] left-[0px]"
 								>
 									<Image
 										src={"/images/about/hero-2.png"}
 										alt=""
-										width={200}
-										height={200}
+										width={300}
+										height={300}
 										className="object-contain animate-pulse-scale"
 									/>
 								</motion.li>
 								<motion.li
 									variants={item}
-									className="absolute bottom-[80px] right-[100px]"
+									className="absolute bottom-[80px] right-[30px]"
 								>
 									<Image
 										src={"/images/about/hero-3.png"}
 										alt=""
-										width={100}
-										height={130}
+										width={150}
+										height={200}
 										className="object-contain animate-pulse-scale"
 									/>
 								</motion.li>
 								<motion.li
 									variants={item}
-									className="absolute top-[180px] left-[90px]"
+									className="absolute top-[180px] left-[-30px]"
 								>
 									<Image
 										src={"/images/about/hero-4.png"}
 										alt=""
-										width={150}
-										height={200}
+										width={170}
+										height={170}
 										className="object-contain animate-pulse-scale"
 									/>
 								</motion.li>

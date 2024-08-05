@@ -255,7 +255,7 @@ export default function Home() {
 							</MoveUpFadeInSection>
 							<MoveUpFadeInSection className="max-w-[400px] bg-gradient-to-b from-slate-700 to-slate-900 rounded-lg shadow-sm flex flex-col gap-8 p-8 h-full w-full items-center justify-between">
 								<Image
-									src={"/images/company/person1.png"}
+									src={"/images/company/person4.png"}
 									alt=""
 									width={700}
 									height={500}
@@ -264,11 +264,11 @@ export default function Home() {
 
 								<div className="flex flex-col gap-2 w-full justify-center items-center">
 									<div className="text-2xl font-[Sora] text-white font-semibold">
-										Jumesh Walia
+										Ashwani Sagar Dhawan
 									</div>
 
 									<div className="font-[Sora] text-white">
-										CEO
+										Chief Marketing Officer
 									</div>
 								</div>
 
@@ -276,7 +276,7 @@ export default function Home() {
 									<Avatar>
 										<AvatarImage
 											src={
-												"/images/countries/united-states.png"
+												"/images/countries/india.png"
 											}
 											alt=""
 										/>
@@ -581,7 +581,7 @@ export default function Home() {
 							</MoveUpFadeInSection>
 							<MoveUpFadeInSection className="max-w-[400px] bg-gradient-to-b from-slate-700 to-slate-900 rounded-lg shadow-sm flex flex-col gap-8 p-8 h-full w-full items-center justify-between">
 								<Image
-									src={"/images/company/person1.png"}
+									src={"/images/company/person4.png"}
 									alt=""
 									width={700}
 									height={500}
@@ -590,11 +590,11 @@ export default function Home() {
 
 								<div className="flex flex-col gap-2 w-full justify-center items-center">
 									<div className="text-2xl font-[Sora] text-white font-semibold">
-										Jumesh Walia
+										Ashwani Sagar Dhawan
 									</div>
 
 									<div className="font-[Sora] text-white">
-										CEO
+										Chief Marketing Officer
 									</div>
 								</div>
 
@@ -602,7 +602,7 @@ export default function Home() {
 									<Avatar>
 										<AvatarImage
 											src={
-												"/images/countries/united-states.png"
+												"/images/countries/india.png"
 											}
 											alt=""
 										/>
