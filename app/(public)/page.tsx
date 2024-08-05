@@ -263,7 +263,7 @@ export default function Home() {
 								/>
 
 								<div className="flex flex-col gap-2 w-full justify-center items-center">
-									<div className="text-2xl font-[Sora] text-white font-semibold">
+									<div className="text-2xl font-[Sora] text-white font-semibold text-center w-full">
 										Ashwani Sagar Dhawan
 									</div>
 
@@ -589,7 +589,7 @@ export default function Home() {
 								/>
 
 								<div className="flex flex-col gap-2 w-full justify-center items-center">
-									<div className="text-2xl font-[Sora] text-white font-semibold">
+									<div className="text-2xl font-[Sora] text-white font-semibold text-center w-full">
 										Ashwani Sagar Dhawan
 									</div>
 
