@@ -5,8 +5,7 @@ import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { ChevronDownIcon, MenuIcon } from "lucide-react";
 import { Drawer, DrawerContent, DrawerTrigger } from "./ui/drawer";
-import Link from "next/link";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { Avatar, AvatarImage } from "./ui/avatar";
 import { DropdownMenu } from "@radix-ui/react-dropdown-menu";
 import {
 	DropdownMenuContent,
@@ -76,7 +75,7 @@ const Header = ({
 	const [selectedCountry, setSelectedCountry] = useState<any>(countries[0]);
 	const [isSelectedCountry, setIsSelectedCountry] = useState(false);
 
-	const { isVisible, videoPath, redirectUrl, showOverlay, hideOverlay } =
+	const { isVisible, videoPath, redirectUrl, hideOverlay } =
 		useVideoOverlay();
 
 	return (
@@ -159,10 +158,11 @@ const Header = ({
 												className="flex items-center gap-2 p-4 hover:bg-muted w-full cursor-pointer"
 												onClick={() => {
 													setSelectedCountry(country);
-													showOverlay(
-														country.desktopvideo,
-														country.href
-													);
+													// showOverlay(
+													// 	country.desktopvideo,
+													// 	country.href
+													// );
+													router.push(country.href);
 												}}
 											>
 												<Avatar>
@@ -219,51 +219,34 @@ const Header = ({
 									>
 										Choose a country
 									</motion.li>
-									<motion.li className="item" variants={item}>
-										<div className="flex items-center gap-2 p-4 border-b mb-2">
-											<Avatar>
-												<AvatarImage
-													src={selectedCountry.image}
-													alt={selectedCountry.name}
-												/>
-											</Avatar>
-											<span>{selectedCountry.name}</span>
-										</div>
-									</motion.li>
-									{countries
-										.filter(
-											(country) =>
-												country.name !==
-												selectedCountry.name
-										)
-										.map((country, index) => (
-											<motion.li
-												key={index}
-												className="item"
-												variants={item}
+
+									{countries.map((country, index) => (
+										<motion.li
+											key={index}
+											className="item"
+											variants={item}
+										>
+											<div
+												className="flex items-center gap-2 p-4 hover:bg-muted w-full cursor-pointer"
+												onClick={() => {
+													setSelectedCountry(country);
+													// showOverlay(
+													// 	country.mobilevideo,
+													// 	country.href
+													// );
+													router.push(country.href);
+												}}
 											>
-												<div
-													className="flex items-center gap-2 p-4 hover:bg-muted w-full cursor-pointer"
-													onClick={() => {
-														setSelectedCountry(
-															country
-														);
-														showOverlay(
-															country.mobilevideo,
-															country.href
-														);
-													}}
-												>
-													<Avatar>
-														<AvatarImage
-															src={country.image}
-															alt={country.name}
-														/>
-													</Avatar>
-													<span>{country.name}</span>
-												</div>
-											</motion.li>
-										))}
+												<Avatar>
+													<AvatarImage
+														src={country.image}
+														alt={country.name}
+													/>
+												</Avatar>
+												<span>{country.name}</span>
+											</div>
+										</motion.li>
+									))}
 								</motion.ul>
 							</DrawerContent>
 						</Drawer>

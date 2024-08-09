@@ -73,7 +73,7 @@ const AboutPage = () => {
 										className="object-contain animate-pulse-scale"
 									/>
 								</motion.li>
-								<motion.li
+								{/* <motion.li
 									variants={item}
 									className="absolute bottom-[100px] left-[-70px]"
 								>
@@ -108,7 +108,7 @@ const AboutPage = () => {
 										height={170}
 										className="object-contain animate-pulse-scale"
 									/>
-								</motion.li>
+								</motion.li> */}
 							</motion.ul>
 						</div>
 					</div>
@@ -215,10 +215,11 @@ const AboutPage = () => {
 											Seamless <br /> Experience
 										</div>
 										<div>
-											At AMI, we take pride in delivering
-											superior customer service, ensuring
-											that our clients receive the highest
-											level of support and satisfaction.
+											We are committed to making your
+											experience with our services
+											seamless and satisfying, addressing
+											all your needs efficiently and
+											effectively.
 										</div>
 									</div>
 								</div>
@@ -346,7 +347,7 @@ const AboutPage = () => {
 										className="object-contain"
 									/>
 								</motion.li>
-								<motion.li
+								{/* <motion.li
 									variants={item}
 									className="absolute bottom-[50px] left-[30px]"
 								>
@@ -381,7 +382,7 @@ const AboutPage = () => {
 										height={20}
 										className="object-contain animate-pulse-scale"
 									/>
-								</motion.li>
+								</motion.li> */}
 							</motion.ul>
 						</MoveUpFadeInSection>
 						<div>
