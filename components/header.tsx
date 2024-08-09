@@ -48,7 +48,7 @@ const countries = [
 	},
 	{
 		name: "Canada",
-		href: "https://www.americanmerchantsinc.com/",
+		href: "https://amimerchants.ca/",
 		image: "/images/countries/canada.png",
 		desktopvideo: "/videos/to-canada.mp4",
 		mobilevideo: "/videos/to-canada-mobile.mp4",

@@ -91,7 +91,7 @@ const Footer = () => {
 				</div>
 			</MoveUpFadeInSection>
 
-			<MoveUpFadeInSection className="flex lg:hidden flex-col gap-4 p-8 bg-PURPLE rounded-lg shadow-sm h-[98vh] w-full text-['Poppins'] text-white">
+			<MoveUpFadeInSection className="flex lg:hidden flex-col gap-4 p-8 bg-PURPLE rounded-lg shadow-sm w-full text-['Poppins'] text-white">
 				<div className="h-full w-full flex flex-col items-center justify-center gap-10 text-2xl font-bold text-center">
 					<MoveUpFadeInSection className="bg-gradient-to-r from-BLUE to-GOLD bg-clip-text text-transparent text-bold text2xl font-[Sora]">
 						Seamless, secure and <br /> swift payments.

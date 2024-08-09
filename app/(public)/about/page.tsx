@@ -320,8 +320,8 @@ const AboutPage = () => {
 				</div>
 			</div>
 
-			<div className="flex lg:hidden bg-gradient-to-b from-BLUE via-GOLD to-white h-screen overflow-y-scroll scrollbar-hide snap-y snap-mandatory flex-col scroll">
-				<div className="min-h-screen w-full p-2 snap-start flex flex-col gap-2">
+			<div className="flex lg:hidden bg-gradient-to-b from-BLUE via-GOLD to-white flex-col">
+				<div className="h-full w-full p-2 snap-start flex flex-col gap-2">
 					<Header active={"about"} />
 
 					<div className="h-full w-full rounded-lg bg-PURPLE text-white shadow-sm flex flex-col p-4 items-center gap-2">
@@ -403,7 +403,7 @@ const AboutPage = () => {
 					</div>
 				</div>
 
-				<div className="min-h-screen h-full w-full snap-start p-2 flex flex-col items-center justify-center gap-4">
+				<div className="h-full w-full p-2 flex flex-col items-center justify-center gap-4">
 					<div className="bg-SKYBLUE rounded-lg shadow-sm flex flex-col gap-4 p-4 h-full w-full items-center justify-center">
 						<div className="w-full flex items-center justify-center">
 							<MoveUpFadeInSection
@@ -517,7 +517,7 @@ const AboutPage = () => {
 					</div>
 				</div>
 
-				<div className="min-h-screen h-full w-full snap-start p-2 flex flex-col items-center justify-center gap-4">
+				<div className="h-full w-full p-2 flex flex-col items-center justify-center gap-4">
 					{/* <div className="bg-SKYBLUE rounded-lg shadow-sm flex gap-4 p-4 w-full items-center justify-between">
 						<div className="w-full flex items-center justify-center">
 							<MoveUpFadeInSection>
@@ -778,7 +778,7 @@ const AboutPage = () => {
 					</div>
 				</div> */}
 
-				<div className="min-h-screen h-full w-full snap-start p-2">
+				<div className="h-full w-full p-2"> 
 					<Footer />
 				</div>
 			</div>
