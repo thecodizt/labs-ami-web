@@ -99,7 +99,7 @@ export default function Home() {
 											Seamless, secure and swift payment
 										</div>
 										<div className="text-xl lg:text-5xl font-bold font-[Sora] text-left">
-											solutions for your business
+											solutions for your business.
 										</div>
 									</motion.li>
 									<motion.li
