@@ -70,6 +70,10 @@ const timelineData = [
 		year: 2021,
 		event: "Registered with Elavon as a retail ISO through US Bank",
 	},
+	{
+		year: 2023,
+		event: "Partnered with Freedom Pay as a retail ISO partner in Canada"
+	}
 ];
 
 export default function Home() {
